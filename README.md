@@ -169,7 +169,15 @@ python ISRU_Reproducibility_Pipeline.py
 
 ## Citation
 
-> Lee, Y. S. (2026). WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities. Acta Astronautica, xx(x), xxx–xxx.
+```bibtex
+@article{Lee2026ISRUConc,
+  author  = {Lee, Y.},
+  title   = {WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities},
+  journal = {Acta Astronautica},
+  year    = {2026},
+  note    = {Under review}
+}
+```
 
 ## License
 
