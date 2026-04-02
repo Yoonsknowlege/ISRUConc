@@ -1,6 +1,6 @@
 # ISRU Construction Patent Analysis — Reproducibility Package
 
-**Paper:** Lee, Y. S. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica* (under review).
+**Paper:** Lee, Y. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica* (under review).
 
 **Dataset:** 453 unique simple patent families (phase-two synchronized dataset)
 
@@ -176,7 +176,7 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 
 ```bibtex
 @article{Lee2026ISRUConc,
-  author  = {Lee, Yoon Seok},
+  author  = {Lee, Y.},
   title   = {WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities},
   journal = {Acta Astronautica},
   year    = {2026},

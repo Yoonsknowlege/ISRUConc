@@ -71,7 +71,7 @@ DEPENDENCIES
 REFERENCE
 ---------
   [Your citation here, e.g.:]
-  Lee, Y. S. (2026). WBS-based patent landscape of ISRU construction:
+  Lee, Y. (2026). WBS-based patent landscape of ISRU construction:
   technology convergence and private-sector entry opportunities.
   Acta Astronautica (under review).
 """
