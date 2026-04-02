@@ -65,9 +65,9 @@ DEPENDENCIES
 REFERENCE
 ---------
   [Your citation here, e.g.:]
-  Lee, Y. S. (2026). Patent-based technology landscape analysis of ISRU
-  construction: An integrated classification and convergence approach.
-  Acta Astronautica, xx(x), xxx–xxx.
+  Lee, Y. S. (2026). WBS-based patent landscape of ISRU construction:
+  technology convergence and private-sector entry opportunities.
+  Acta Astronautica (under review).
 """
 
 import pandas as pd

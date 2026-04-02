@@ -1,6 +1,6 @@
 # ISRU Construction Patent Analysis — Reproducibility Package
 
-**Paper:** Lee, Y. S. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica*, xx(x), xxx--xxx.
+**Paper:** Lee, Y. S. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica* (under review).
 
 **Dataset:** 453 unique simple patent families (phase-two synchronized dataset)
 
@@ -155,7 +155,8 @@ This package provides the verbatim Lens.org Boolean query string, the ITC-to-WBS
   author  = {Lee, Yoon Seok},
   title   = {WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities},
   journal = {Acta Astronautica},
-  year    = {2026}
+  year    = {2026},
+  note    = {Under review}
 }
 ```
 
