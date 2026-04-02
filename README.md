@@ -1,4 +1,4 @@
-# ISRU Construction Patent Analysis — Reproducibility Package (v2)
+# ISRU Construction Patent Analysis — Reproducibility Package
 
 **Paper:** Lee, Y. S. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica*, xx(x), xxx--xxx.
 
@@ -143,15 +143,6 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | Domain-external | 80 (17.7%) |
 | Total ITC tags | 795 |
 | Deduplication | Lens Simple Family ID, union-find grouping |
-
-## v2 Changelog (2026-04-02)
-
-- **CPC_CENTRALITY** replaces `CPC_BRIDGING`: now includes both weighted degree centrality and BFS betweenness centrality, matching manuscript Table 5. Betweenness normalization by (N-1)(N-2)/2 is documented in code.
-- **Dual Jaccard method** in `ISRU_Reproducibility_Pipeline.py`: `method='family'` (default, matching manuscript) and `method='cpc'` (CPC-set overlap).
-- **ITC 4-5 CPC anchors** unified to `B64G1/46; A01G` across `isru_data.py`, `crosswalk_codebook.csv`, and manuscript Table 2.
-- **Figure 3** generation added: filing-year distribution by WBS layer with cumulative growth line.
-- **`adjudication_log.csv`** created: machine-readable audit trail of the R1--R6 screening and consolidation pipeline.
-- **`requirements.txt`** added.
 
 ## Scope and Limitations
 

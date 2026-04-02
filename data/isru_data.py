@@ -1,6 +1,6 @@
 """
-ISRU Construction Patent Analysis — Core Data Module (Phase-Two v2)
-===================================================================
+ISRU Construction Patent Analysis — Core Data Module (Phase-Two)
+================================================================
 Dataset: 453 unique simple patent families (phase-two synchronized dataset)
 Source:   Lens.org
 Search date: 2026-03-28

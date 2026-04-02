@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-ISRU Construction Patent Analysis — Figure Generation Script (Phase-Two v2)
-===========================================================================
+ISRU Construction Patent Analysis — Figure Generation Script (Phase-Two)
+========================================================================
 Generates publication-quality figures for the manuscript.
 All data drawn from the phase-two 453-family synchronized dataset.
 
