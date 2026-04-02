@@ -1,6 +1,6 @@
 """
-ISRU Construction Patent Analysis — Core Data Module (Phase-Two)
-================================================================
+ISRU Construction Patent Analysis — Core Data Module (Phase-Two v2)
+===================================================================
 Dataset: 453 unique simple patent families (phase-two synchronized dataset)
 Source:   Lens.org
 Search date: 2026-03-28
@@ -368,47 +368,21 @@ CPC_COOCCURRENCE = np.array([
 ])
 
 # ============================================================
-# CPC Bridging Centrality (degree centrality, top 10)
+# CPC Centrality (Table 5 — weighted degree + BFS betweenness)
 # ============================================================
-CPC_BRIDGING = [
-    [
-        "B64G",
-        0.792
-    ],
-    [
-        "C04B",
-        0.667
-    ],
-    [
-        "Y02P",
-        0.667
-    ],
-    [
-        "B33Y",
-        0.625
-    ],
-    [
-        "E02D",
-        0.583
-    ],
-    [
-        "G01N",
-        0.5
-    ],
-    [
-        "E04B",
-        0.5
-    ],
-    [
-        "E04G",
-        0.5
-    ],
-    [
-        "Y02E",
-        0.5
-    ],
-    [
-        "E04H",
-        0.458
-    ]
+# Degree centrality: weighted by co-occurrence count, normalized
+#   by (N-1) where N = number of unique CPC 4-char subclasses.
+# Betweenness centrality: BFS shortest-path approximation on the
+#   binary co-occurrence graph, normalized by (N-1)(N-2)/2.
+CPC_CENTRALITY = [
+    {"cpc": "B64G", "degree": 0.422, "betweenness": 0.107},
+    {"cpc": "E04H", "degree": 0.301, "betweenness": 0.088},
+    {"cpc": "E21C", "degree": 0.289, "betweenness": 0.056},
+    {"cpc": "C04B", "degree": 0.265, "betweenness": 0.088},
+    {"cpc": "B33Y", "degree": 0.253, "betweenness": 0.129},
+    {"cpc": "E04B", "degree": 0.217, "betweenness": 0.075},
+    {"cpc": "B22F", "degree": 0.199, "betweenness": 0.050},
+    {"cpc": "B29C", "degree": 0.169, "betweenness": 0.052},
+    {"cpc": "E02D", "degree": 0.163, "betweenness": 0.063},
+    {"cpc": "G01N", "degree": 0.151, "betweenness": 0.031},
 ]

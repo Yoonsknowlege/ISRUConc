@@ -494,12 +494,15 @@ def compute_cpc_network(df, col_map, delimiter):
                 adj[cpcs_l[i]][cpcs_l[j]] += 1
                 adj[cpcs_l[j]][cpcs_l[i]] += 1
 
-    # Degree centrality (weighted)
-    max_edges = len(cpc_list) - 1
+    # Degree centrality (weighted, normalized by N-1)
+    N = len(cpc_list)
+    max_edges = N - 1
     degree = {c: sum(adj[c].values()) / max_edges if max_edges > 0 else 0
               for c in cpc_list}
 
-    # Betweenness centrality (BFS approximation)
+    # Betweenness centrality (BFS shortest-path approximation)
+    # Normalized by (N-1)(N-2)/2 — the number of unordered pairs
+    # excluding the node itself — following Freeman (1977).
     between = {c: 0 for c in cpc_list}
     for start in cpc_list:
         visited = {start}
@@ -513,6 +516,9 @@ def compute_cpc_network(df, col_map, delimiter):
                     queue.append((nbr, new_path))
                     for mid in new_path[1:-1]:
                         between[mid] += 1
+    # Normalize betweenness
+    norm = (N - 1) * (N - 2) / 2 if N > 2 else 1
+    between = {c: v / norm for c, v in between.items()}
 
     # Greedy modularity community detection
     print("  Running greedy modularity community detection...")
@@ -557,32 +563,50 @@ def compute_cpc_network(df, col_map, delimiter):
     return cpc_list, adj, degree, between, comm_data, best_Q
 
 
-def compute_jaccard(df, itc_rules, col_map, delimiter):
-    """Stage 4: Jaccard similarity between ITC domains."""
-    print(f"\n[4/5] Jaccard Similarity Analysis...")
+def compute_jaccard(df, itc_rules, col_map, delimiter, method='family'):
+    """Stage 4: Jaccard similarity between ITC domains.
 
-    cpc_col = col_map['cpc']
-    domain_cpcs = {}
-
-    for domain_id in itc_rules:
-        mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
-        dp = df[mask]
-        cpcs = set()
-        for _, row in dp.iterrows():
-            codes = [c.strip() for c in str(row[cpc_col]).split(delimiter) if c.strip()]
-            cpcs.update(codes)
-        domain_cpcs[domain_id] = cpcs
+    Parameters
+    ----------
+    method : str
+        'family' (default) — Jaccard over patent-family sets per domain.
+            J(A,B) = |families_A ∩ families_B| / |families_A ∪ families_B|
+            This is the method used in the manuscript.
+        'cpc' — Jaccard over CPC-code sets per domain.
+            J(A,B) = |CPCs_A ∩ CPCs_B| / |CPCs_A ∪ CPCs_B|
+    """
+    print(f"\n[4/5] Jaccard Similarity Analysis (method='{method}')...")
 
     domains = sorted(itc_rules.keys())
     n = len(domains)
+
+    if method == 'family':
+        domain_sets = {}
+        for domain_id in domains:
+            mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
+            domain_sets[domain_id] = set(df[mask].index)
+    elif method == 'cpc':
+        cpc_col = col_map['cpc']
+        domain_sets = {}
+        for domain_id in domains:
+            mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
+            dp = df[mask]
+            cpcs = set()
+            for _, row in dp.iterrows():
+                codes = [c.strip() for c in str(row[cpc_col]).split(delimiter) if c.strip()]
+                cpcs.update(codes)
+            domain_sets[domain_id] = cpcs
+    else:
+        raise ValueError(f"Unknown Jaccard method: '{method}'. Use 'family' or 'cpc'.")
+
     mat = np.zeros((n, n))
     for i in range(n):
         for j in range(n):
             if i == j:
                 mat[i, j] = 1.0
             else:
-                inter = len(domain_cpcs[domains[i]] & domain_cpcs[domains[j]])
-                union = len(domain_cpcs[domains[i]] | domain_cpcs[domains[j]])
+                inter = len(domain_sets[domains[i]] & domain_sets[domains[j]])
+                union = len(domain_sets[domains[i]] | domain_sets[domains[j]])
                 mat[i, j] = inter / union if union > 0 else 0
 
     # Sorted pairs

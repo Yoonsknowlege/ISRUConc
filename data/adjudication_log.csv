@@ -1,0 +1,8 @@
+stage,description,input_count,output_count,rule,notes
+R1_retrieval,Lens.org Boolean query (K1-K8 + C1-C5),n/a,1093,LENS_QUERY verbatim string,Search date 2026-03-28
+R2_screening_round1,LLM-assisted relevance scoring (threshold R2 >= 2.0),1093,756,"GPT-4 (gpt-4-0613) + Claude 3.5 Sonnet (claude-3-5-sonnet-20241022), temp=0","Cohen's kappa = 0.74; 5-point rubric (0-5)"
+R2_screening_round2,Tightened threshold R2 >= 2.5 after human audit,756,511,"35-record sample audit: 0% irrelevant at 2.5 cutoff","Corpus mean R2 = 3.59, median 3.50"
+R3_itc_rescue,CPC-anchored false-negative recovery (1.5 <= R2 < 2.5),582,12,"At least one CPC/IPC matches an ITC domain anchor prefix","12 records rescued from 582 excluded candidates"
+R4_pre_dedup,Combined validated + rescued records,n/a,523,Union of R2 output + R3 rescued,511 + 12 = 523
+R5_family_consolidation,Union-find grouping by Lens Simple Family ID,523,453,"416 singletons + 37 multi-member groups","453 unique simple patent families"
+R6_itc_tagging,Deterministic CPC Hybrid v2 tagging,453,373 tagged / 80 external,"OR-based: CPC prefix → keyword stem; multi-tag permitted","795 total ITC tags; mean 1.76 per family"

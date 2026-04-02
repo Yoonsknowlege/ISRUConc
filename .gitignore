@@ -25,8 +25,12 @@ desktop.ini
 # Output (regenerable)
 *.xlsx
 
-# Archives (source zip already extracted)
+# Archives
 reproduction_package_20260402.zip
+reproduction_package_20260402_v2.zip
+
+# Manuscript (not distributed via GitHub)
+*.docx
 
 # Claude Code
 .claude/

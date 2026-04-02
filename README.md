@@ -1,4 +1,4 @@
-# ISRU Construction Patent Analysis — Reproducibility Package
+# ISRU Construction Patent Analysis — Reproducibility Package (v2)
 
 **Paper:** Lee, Y. S. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica*, xx(x), xxx--xxx.
 
@@ -10,12 +10,14 @@
 ISRUConc/
 ├── README.md
 ├── LICENSE                                ← CC BY 4.0
+├── requirements.txt                       ← Python dependencies
 ├── data/
 │   ├── isru_data.py                       ← Core data module (constants, matrices, ITC_RULES, LENS_QUERY)
 │   ├── crosswalk_codebook.csv             ← ITC-to-WBS crosswalk with CPC/keyword/source mapping
-│   └── phase2_453_families.json           ← 453-family tagged dataset (Lens IDs, CPC, ITC tags)
+│   ├── phase2_453_families.json           ← 453-family tagged dataset (Lens IDs, CPC, ITC tags)
+│   └── adjudication_log.csv               ← Screening & consolidation audit trail (R1–R6)
 ├── scripts/
-│   ├── generate_all_figures.py            ← Figure generation (Figs. 2, 4, 5, S1)
+│   ├── generate_all_figures.py            ← Figure generation (Figs. 2, 3, 4, 5, S1)
 │   └── ISRU_Reproducibility_Pipeline.py   ← Full parameterized analysis pipeline
 └── figures/                               ← Pre-generated publication-quality PNGs
 ```
@@ -25,7 +27,7 @@ ISRUConc/
 ### Requirements
 
 ```bash
-pip install matplotlib seaborn numpy pandas openpyxl
+pip install -r requirements.txt
 ```
 
 Python 3.9+
@@ -57,7 +59,7 @@ The pipeline produces:
 |---|---|---|
 | Fig. 1 | Overall research framework | Conceptual diagram (not code-generated) |
 | Fig. 2 | ITC domain portfolio bar chart | `fig2_portfolio_bar.png` |
-| Fig. 3 | Filing-year growth trajectory | Timeline diagram (not code-generated) |
+| Fig. 3 | Filing-year distribution by WBS layer | `fig3_filing_year.png` |
 | Fig. 4 | CPC co-classification heatmap | `fig4_cpc_coclass.png` |
 | Fig. 5 | Jaccard similarity matrix | `fig5_jaccard_heatmap.png` |
 | Fig. S1 | WBS-layer tag-share distribution | `figS1_wbs_stacked.png` (supplementary) |
@@ -124,7 +126,7 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | `JACCARD_MATRIX` | 15x15 Jaccard similarity (phase-two) |
 | `CPC_TOP25` | Top 25 CPC codes by frequency |
 | `CPC_COOCCURRENCE` | 25x25 co-occurrence matrix |
-| `CPC_BRIDGING` | Degree centrality for top CPC codes |
+| `CPC_CENTRALITY` | Weighted degree + BFS betweenness for top CPC codes (Table 5) |
 | `TOP_JACCARD_PAIRS` | Ranked inter-domain Jaccard pairs |
 
 ## Data Source
@@ -142,9 +144,18 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | Total ITC tags | 795 |
 | Deduplication | Lens Simple Family ID, union-find grouping |
 
+## v2 Changelog (2026-04-02)
+
+- **CPC_CENTRALITY** replaces `CPC_BRIDGING`: now includes both weighted degree centrality and BFS betweenness centrality, matching manuscript Table 5. Betweenness normalization by (N-1)(N-2)/2 is documented in code.
+- **Dual Jaccard method** in `ISRU_Reproducibility_Pipeline.py`: `method='family'` (default, matching manuscript) and `method='cpc'` (CPC-set overlap).
+- **ITC 4-5 CPC anchors** unified to `B64G1/46; A01G` across `isru_data.py`, `crosswalk_codebook.csv`, and manuscript Table 2.
+- **Figure 3** generation added: filing-year distribution by WBS layer with cumulative growth line.
+- **`adjudication_log.csv`** created: machine-readable audit trail of the R1--R6 screening and consolidation pipeline.
+- **`requirements.txt`** added.
+
 ## Scope and Limitations
 
-This package provides the verbatim Lens.org Boolean query string, the ITC-to-WBS crosswalk codebook, aggregated matrices, and plotting scripts sufficient to reproduce the code-generated figures and verify the analytical constants reported in the manuscript. The family-consolidation log and per-record LLM adjudication scores are documented in the manuscript Appendix but are not included as machine-readable files in this release.
+This package provides the verbatim Lens.org Boolean query string, the ITC-to-WBS crosswalk codebook, aggregated matrices, the adjudication audit trail, and plotting scripts sufficient to reproduce the code-generated figures and verify the analytical constants reported in the manuscript. The per-record LLM adjudication scores are documented in the manuscript Appendix but are not included as machine-readable files in this release.
 
 ## Citation
 

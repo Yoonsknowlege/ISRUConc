@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """
-ISRU Construction Patent Analysis — Figure Generation Script (Phase-Two)
-========================================================================
+ISRU Construction Patent Analysis — Figure Generation Script (Phase-Two v2)
+===========================================================================
 Generates publication-quality figures for the manuscript.
 All data drawn from the phase-two 453-family synchronized dataset.
 
 Figures (matching manuscript numbering):
   Fig. 2 — ITC Portfolio bar (horizontal) by domain
+  Fig. 3 — Filing-year distribution by WBS layer (from phase2_453_families.json)
   Fig. 4 — CPC co-classification heatmap (phase-two top 25)
   Fig. 5 — Jaccard similarity heatmap (phase-two 15x15)
   Fig. S1 — ITC domain tag-share by WBS layer (stacked bar, supplementary)
 
-Note: Fig. 1 (overall research framework) and Fig. 3 (filing-year growth
-trajectory) are conceptual/timeline diagrams created outside this script.
+Note: Fig. 1 (overall research framework) is a conceptual diagram created
+outside this script.
 """
-import sys, os
+import sys, os, json
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'data'))
 
 import matplotlib
@@ -65,6 +66,71 @@ def fig2_portfolio_bar():
     fig.savefig(os.path.join(FIGDIR, 'fig2_portfolio_bar.png'))
     plt.close(fig)
     print("  fig2_portfolio_bar.png")
+
+
+def fig3_filing_year():
+    """Figure 3: Filing-year distribution by WBS layer (N=453 families)."""
+    json_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'phase2_453_families.json')
+    with open(json_path, 'r', encoding='utf-8') as f:
+        families = json.load(f)
+
+    wbs_year = {}  # {wbs_label: {year: count}}
+    wbs_labels_ordered = ['WBS-1 Materials', 'WBS-2 Manufacturing',
+                          'WBS-3 Robotics', 'WBS-4 Structures & Systems']
+
+    for fam in families:
+        year = fam.get('earliest_priority_year') or fam.get('publication_year')
+        if not year or int(year) < 1990:
+            continue
+        year = int(year)
+        itc_tags = fam.get('itc_domains', [])
+        wbs_seen = set()
+        for tag in itc_tags:
+            layer = tag.split('-')[0]
+            wbs_label = {
+                '1': 'WBS-1 Materials', '2': 'WBS-2 Manufacturing',
+                '3': 'WBS-3 Robotics', '4': 'WBS-4 Structures & Systems'
+            }.get(layer)
+            if wbs_label and wbs_label not in wbs_seen:
+                wbs_seen.add(wbs_label)
+                wbs_year.setdefault(wbs_label, {})
+                wbs_year[wbs_label][year] = wbs_year[wbs_label].get(year, 0) + 1
+
+    if not wbs_year:
+        print("  fig3_filing_year.png — SKIPPED (no year data in JSON)")
+        return
+
+    all_years = sorted({y for d in wbs_year.values() for y in d})
+    fig, ax1 = plt.subplots(figsize=(12, 6))
+
+    wbs_colors_list = ['#5B9BD5', '#ED7D31', '#70AD47', '#C0504D']
+    bottoms = np.zeros(len(all_years))
+    total_per_year = np.zeros(len(all_years))
+
+    for wbs_label, color in zip(wbs_labels_ordered, wbs_colors_list):
+        counts = np.array([wbs_year.get(wbs_label, {}).get(y, 0) for y in all_years])
+        ax1.bar(all_years, counts, bottom=bottoms, color=color,
+                label=wbs_label, edgecolor='white', linewidth=0.3, width=0.8)
+        bottoms += counts
+        total_per_year += counts
+
+    # Cumulative growth line
+    ax2 = ax1.twinx()
+    cumulative = np.cumsum(total_per_year)
+    ax2.plot(all_years, cumulative, color='black', linewidth=1.5,
+             marker='o', markersize=3, label='Cumulative')
+    ax2.set_ylabel('Cumulative families')
+
+    ax1.set_xlabel('Earliest priority year')
+    ax1.set_ylabel('Number of families')
+    ax1.set_title('Filing-Year Distribution by WBS Layer (N = 453 families)')
+    ax1.legend(loc='upper left', fontsize=9)
+    ax1.spines['top'].set_visible(False)
+    ax1.grid(axis='y', alpha=0.3)
+
+    fig.savefig(os.path.join(FIGDIR, 'fig3_filing_year.png'))
+    plt.close(fig)
+    print("  fig3_filing_year.png")
 
 
 def fig4_cpc_heatmap():
@@ -137,6 +203,7 @@ def figS1_wbs_stacked():
 if __name__ == '__main__':
     print("Generating figures...")
     fig2_portfolio_bar()
+    fig3_filing_year()
     fig4_cpc_heatmap()
     fig5_jaccard_heatmap()
     figS1_wbs_stacked()
