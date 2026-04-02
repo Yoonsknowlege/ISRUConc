@@ -18,13 +18,13 @@ This package has two components:
 ISRUConc/
 ├── README.md
 ├── LICENSE                                ← CC BY 4.0
-├── requirements.txt                       ← Python dependencies
+├── requirements.txt                       ← Python dependencies (pinned versions)
 ├── data/
 │   ├── isru_data.py                       ← Core data module (constants, matrices, ITC_RULES, LENS_QUERY)
 │   ├── crosswalk_codebook.csv             ← ITC-to-WBS crosswalk with CPC/keyword/source mapping
-│   ├── phase2_453_families.json           ← 453-family tagged dataset (Lens IDs, CPC, ITC tags, priority year)
+│   ├── phase2_453_families.json           ← 453-family tagged dataset (11 fields; see JSON Schema)
 │   ├── screening_decisions.csv            ← Per-record screening pipeline (1,093 records, R1–R6)
-│   ├── family_merge_map.csv               ← Family consolidation map (521 entries → 453 families)
+│   ├── family_merge_map.csv               ← Family consolidation map (523 records → 453 families)
 │   └── raw_1093_ids.csv                   ← Initial retrieval hashed IDs with retrieval date
 ├── scripts/
 │   ├── generate_all_figures.py            ← Figure generation (Figs. 2, 3, 4, 5, S1)
@@ -73,6 +73,44 @@ The pipeline produces:
 | Fig. 4 | CPC co-classification heatmap | `fig4_cpc_coclass.png` |
 | Fig. 5 | Jaccard similarity matrix | `fig5_jaccard_heatmap.png` |
 | Fig. S1 | WBS-layer tag-share distribution | `figS1_wbs_stacked.png` (supplementary) |
+
+## Dataset Audit Table
+
+Reconciliation of stage counts across manuscript narrative, Appendix A, and public data files.
+
+| Stage | Manuscript / Appendix A | Public File | Count | Unit |
+|---|---|---|---|---|
+| R1: Lens.org retrieval | Section 3.1 / A.1 | `raw_1093_ids.csv` | 1,093 | records |
+| R2: Relevance scoring | Section 3.2 / A.2 | `screening_decisions.csv` (r2_decision=include) | 511 | records |
+| R2: Excluded | Section 3.2 / A.2 | `screening_decisions.csv` (r2_decision=exclude) | 582 | records |
+| R4: ITC-rescue | Section 3.4 / A.4 | `screening_decisions.csv` (r4_rescue_flag=True) | 12 | records |
+| R5: Pre-dedup total | Section 3.5 / A.5 | `screening_decisions.csv` (r5_pre_dedup=True) | 523 | records |
+| R5: Pre-dedup total | Section 3.5 / A.5 | `family_merge_map.csv` (all rows) | 523 | records |
+| R6: Final families | Section 3.6 | `phase2_453_families.json` | 453 | families |
+| R6: Merged (non-rep) | Section 3.6 | `family_merge_map.csv` (is_representative=False) | 70 | records |
+
+**Notes:**
+- `screening_decisions.csv` and `family_merge_map.csv` are **record-level** files (1,093 and 523 rows, respectively).
+- `phase2_453_families.json` is a **family-level** file (453 entries after union-find deduplication).
+- The pipeline flow is: 1,093 → 511 included + 12 rescued → 523 pre-dedup → 453 unique families.
+
+## JSON Schema (`phase2_453_families.json`)
+
+Each of the 453 family records contains 11 fields:
+
+| Field | Type | Description |
+|---|---|---|
+| `lens_id` | string | Lens.org patent family identifier |
+| `title` | string | Patent title |
+| `abstract` | string | Truncated abstract (≤500 chars) |
+| `cpc` | string | Semicolon-delimited CPC codes |
+| `itc_names` | array of string | Assigned ITC domain names |
+| `source` | string | Screening pathway (`r2_keep` or `r4_rescue`) |
+| `earliest_priority_year` | int | Earliest priority filing year |
+| `itc_domains` | array of string | Assigned ITC domain codes (e.g., `1-1`, `2-3`) |
+| `jurisdiction` | string | Filing jurisdiction code (CN, US, WO, EP, KR, JP, ...) |
+| `applicant_type` | string | Applicant classification (`corporate`, `academic`, `government`, `individual`) |
+| `publication_year` | int | Earliest publication year |
 
 ## Reproducibility Protocol (Appendix A Summary)
 
@@ -149,24 +187,27 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | Initial retrieval | 1,093 patent records |
 | Validated core | 511 records / 443 families |
 | ITC-rescued | +12 records (CPC-anchored false negatives) |
+| Pre-dedup total | 523 records |
+| Dedup method | Lens Simple Family ID, union-find grouping |
 | Phase-two dataset | 453 unique simple patent families |
 | Tagged families | 373 (82.3%) |
 | Domain-external | 80 (17.7%) |
 | Total ITC tags | 795 |
-| Deduplication | Lens Simple Family ID, union-find grouping |
 
-## Scope and Limitations
+## Reproducibility Scope
 
-**What this enables:**
-- Reproduce all code-generated figures (Figs. 2–5, S1) from the provided data
-- Verify every analytical constant reported in the manuscript (portfolio counts, Jaccard values, centrality scores)
-- Trace each of the 1,093 initial records through the full screening pipeline (R1–R6) via `screening_decisions.csv`
-- Inspect the family consolidation logic via `family_merge_map.csv`
+**What this package verifies:**
+- Reproduce all code-generated figures (Figs. 2--5, S1) from the provided data
+- Verify portfolio counts, Jaccard similarity values, and CPC centrality scores reported in the manuscript
+- Trace each of the 1,093 initial records through the full screening pipeline (R1--R6) via `screening_decisions.csv` (record-level)
+- Inspect the family consolidation logic via `family_merge_map.csv` (record-level: 523 records → 453 families)
+- Verify Table 7 claims: Chinese patent share via `jurisdiction` field, post-2020 filing ratio via `publication_year` field, and applicant-type breakdown via `applicant_type` field in the JSON
 - Apply the same parameterized pipeline to new patent datasets
 
-**What this does not yet provide:**
+**What is not verifiable from this package:**
 - Raw full-text patent records (subject to Lens.org terms of use; hashed IDs are provided instead)
 - Per-record LLM adjudication prompts/responses (documented in the manuscript Appendix)
+- Tables 8--10 contain qualitative author judgments on technology readiness and entry-window hypothesis maps that are not mechanically derivable from the dataset
 
 **Notes:**
 - Jaccard similarity values in the manuscript and `JACCARD_MATRIX` are computed on a patent-family basis (J(A,B) = |families_A ∩ families_B| / |families_A ∪ families_B|), not on CPC code sets

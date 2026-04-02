@@ -11,7 +11,10 @@
     "earliest_priority_year": 2002,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2004
   },
   {
     "lens_id": "102-023-038-110-548",
@@ -27,7 +30,10 @@
     "itc_domains": [
       "1-1",
       "1-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2007
   },
   {
     "lens_id": "001-644-359-654-888",
@@ -51,7 +57,10 @@
       "2-4",
       "3-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2017
   },
   {
     "lens_id": "050-086-714-811-491",
@@ -67,7 +76,10 @@
     "itc_domains": [
       "4-3",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "062-567-139-510-205",
@@ -85,7 +97,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "190-071-867-525-212",
@@ -107,7 +122,10 @@
       "3-3",
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2002
   },
   {
     "lens_id": "106-594-158-271-391",
@@ -125,7 +143,10 @@
       "1-1",
       "2-1",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2021
   },
   {
     "lens_id": "123-475-504-559-879",
@@ -139,7 +160,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "054-841-991-520-336",
@@ -153,7 +177,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "068-937-559-043-352",
@@ -167,7 +194,10 @@
     "earliest_priority_year": 2009,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2011
   },
   {
     "lens_id": "068-596-540-230-809",
@@ -185,7 +215,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "039-528-385-518-952",
@@ -205,7 +238,10 @@
       "1-2",
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "146-821-351-857-456",
@@ -221,7 +257,10 @@
     "itc_domains": [
       "1-2",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "170-224-735-783-796",
@@ -237,7 +276,10 @@
     "itc_domains": [
       "2-1",
       "3-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 1997
   },
   {
     "lens_id": "124-073-640-771-027",
@@ -255,7 +297,10 @@
       "1-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2019
   },
   {
     "lens_id": "034-211-756-564-96X",
@@ -275,7 +320,10 @@
       "2-2",
       "2-3",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2007
   },
   {
     "lens_id": "182-723-188-429-510",
@@ -289,7 +337,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "056-643-427-726-590",
@@ -311,7 +362,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "103-170-089-356-78X",
@@ -327,7 +381,10 @@
     "itc_domains": [
       "1-2",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "149-903-531-189-051",
@@ -347,7 +404,10 @@
       "2-1",
       "2-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "177-864-367-117-000",
@@ -367,7 +427,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2027
   },
   {
     "lens_id": "172-390-595-682-825",
@@ -381,7 +444,10 @@
     "earliest_priority_year": 2005,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "132-569-411-464-84X",
@@ -395,7 +461,10 @@
     "earliest_priority_year": 2008,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2010
   },
   {
     "lens_id": "046-021-093-098-555",
@@ -413,7 +482,10 @@
       "1-2",
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "073-024-421-109-819",
@@ -431,7 +503,10 @@
       "1-2",
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2000
   },
   {
     "lens_id": "134-720-364-544-493",
@@ -451,7 +526,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "129-255-465-607-615",
@@ -467,7 +545,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "034-345-624-950-109",
@@ -485,7 +566,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "110-138-204-883-475",
@@ -499,7 +583,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2024
   },
   {
     "lens_id": "148-756-629-236-617",
@@ -517,7 +604,10 @@
       "1-3",
       "3-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "074-453-584-927-535",
@@ -535,7 +625,10 @@
       "1-2",
       "2-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2015
   },
   {
     "lens_id": "048-671-560-798-655",
@@ -551,7 +644,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "government",
+    "publication_year": 2024
   },
   {
     "lens_id": "166-753-917-204-117",
@@ -567,7 +663,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "012-104-259-178-791",
@@ -593,7 +692,10 @@
       "3-1",
       "3-3",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2020
   },
   {
     "lens_id": "037-752-510-247-711",
@@ -617,7 +719,10 @@
       "2-4",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "161-059-709-074-125",
@@ -633,7 +738,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "137-444-629-554-621",
@@ -657,7 +765,10 @@
       "2-2",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "AU",
+    "applicant_type": "government",
+    "publication_year": 2015
   },
   {
     "lens_id": "079-826-215-013-907",
@@ -671,7 +782,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "112-996-752-185-399",
@@ -691,7 +805,10 @@
       "4-2",
       "4-3",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "036-096-288-945-893",
@@ -707,7 +824,10 @@
     "itc_domains": [
       "3-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "160-450-456-889-400",
@@ -723,7 +843,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "009-489-822-113-391",
@@ -741,7 +864,10 @@
       "1-3",
       "3-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "individual",
+    "publication_year": 2022
   },
   {
     "lens_id": "174-314-340-624-111",
@@ -757,7 +883,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "013-264-903-574-867",
@@ -771,7 +900,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "183-166-994-280-017",
@@ -791,7 +923,10 @@
       "2-1",
       "2-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "168-291-035-691-223",
@@ -809,7 +944,10 @@
       "2-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "005-423-342-957-627",
@@ -827,7 +965,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2017
   },
   {
     "lens_id": "096-687-856-616-184",
@@ -845,7 +986,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2001
   },
   {
     "lens_id": "004-192-864-658-286",
@@ -863,7 +1007,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "135-685-354-980-983",
@@ -881,7 +1028,10 @@
       "1-3",
       "2-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2013
   },
   {
     "lens_id": "155-156-267-848-345",
@@ -901,7 +1051,10 @@
       "2-4",
       "3-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "168-953-807-080-044",
@@ -919,7 +1072,10 @@
       "2-3",
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "001-365-377-055-297",
@@ -935,7 +1091,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "160-484-724-276-658",
@@ -951,7 +1110,10 @@
     "itc_domains": [
       "1-2",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "016-391-930-515-863",
@@ -969,7 +1131,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "083-458-058-144-695",
@@ -985,7 +1150,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "165-613-043-078-496",
@@ -1002,7 +1170,10 @@
       "1-2",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "IN",
+    "applicant_type": "individual",
+    "publication_year": 2006
   },
   {
     "lens_id": "167-251-678-486-458",
@@ -1024,7 +1195,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "080-835-290-708-311",
@@ -1042,7 +1216,10 @@
       "1-2",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2020
   },
   {
     "lens_id": "077-747-526-233-538",
@@ -1060,7 +1237,10 @@
       "1-3",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "004-384-373-936-09X",
@@ -1078,7 +1258,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2011
   },
   {
     "lens_id": "060-051-985-748-562",
@@ -1094,7 +1277,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "000-050-192-239-695",
@@ -1114,7 +1300,10 @@
       "4-2",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "194-830-686-858-560",
@@ -1132,7 +1321,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 1999
   },
   {
     "lens_id": "010-067-837-229-819",
@@ -1150,7 +1342,10 @@
       "1-3",
       "2-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "118-139-721-809-981",
@@ -1168,7 +1363,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "180-843-417-044-379",
@@ -1186,7 +1384,10 @@
       "1-1",
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "161-464-221-483-282",
@@ -1206,7 +1407,10 @@
       "2-1",
       "2-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "038-116-312-465-733",
@@ -1220,7 +1424,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "092-158-603-331-325",
@@ -1236,7 +1443,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "152-092-286-033-249",
@@ -1252,7 +1462,10 @@
     "itc_domains": [
       "1-2",
       "3-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2028
   },
   {
     "lens_id": "006-915-255-521-021",
@@ -1272,7 +1485,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "035-909-461-720-014",
@@ -1290,7 +1506,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2021
   },
   {
     "lens_id": "130-664-747-144-252",
@@ -1310,7 +1529,10 @@
       "1-2",
       "4-1",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "191-157-552-649-45X",
@@ -1328,7 +1550,10 @@
       "2-1",
       "2-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2020
   },
   {
     "lens_id": "084-114-906-765-011",
@@ -1342,7 +1567,10 @@
     "earliest_priority_year": 2009,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2011
   },
   {
     "lens_id": "064-541-144-178-494",
@@ -1360,7 +1588,10 @@
       "1-2",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "123-086-222-269-145",
@@ -1376,7 +1607,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "146-523-009-748-03X",
@@ -1394,7 +1628,10 @@
       "2-1",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2023
   },
   {
     "lens_id": "096-487-039-064-280",
@@ -1412,7 +1649,10 @@
       "1-1",
       "1-2",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2002
   },
   {
     "lens_id": "049-923-631-307-636",
@@ -1428,7 +1668,10 @@
     "itc_domains": [
       "4-3",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2009
   },
   {
     "lens_id": "119-888-337-012-374",
@@ -1444,7 +1687,10 @@
     "itc_domains": [
       "1-1",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "124-303-561-692-225",
@@ -1464,7 +1710,10 @@
       "2-1",
       "2-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "075-067-497-779-248",
@@ -1478,7 +1727,10 @@
     "earliest_priority_year": 2014,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "academic",
+    "publication_year": 2016
   },
   {
     "lens_id": "163-042-872-144-367",
@@ -1492,7 +1744,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2013
   },
   {
     "lens_id": "043-654-664-857-035",
@@ -1510,7 +1765,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2017
   },
   {
     "lens_id": "080-235-443-977-880",
@@ -1528,7 +1786,10 @@
       "1-2",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "138-534-285-399-159",
@@ -1550,7 +1811,10 @@
       "2-1",
       "2-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "195-841-702-516-377",
@@ -1566,7 +1830,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2005
   },
   {
     "lens_id": "160-101-694-693-889",
@@ -1582,7 +1849,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2017
   },
   {
     "lens_id": "162-812-343-325-367",
@@ -1598,7 +1868,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "147-163-704-802-691",
@@ -1612,7 +1885,10 @@
     "earliest_priority_year": 2016,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2017
   },
   {
     "lens_id": "001-869-679-642-621",
@@ -1628,7 +1904,10 @@
     "itc_domains": [
       "2-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 1997
   },
   {
     "lens_id": "082-478-261-243-172",
@@ -1650,7 +1929,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2019
   },
   {
     "lens_id": "029-316-137-364-969",
@@ -1668,7 +1950,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2006
   },
   {
     "lens_id": "085-536-809-046-433",
@@ -1682,7 +1967,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "105-204-753-751-127",
@@ -1700,7 +1988,10 @@
       "1-2",
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2017
   },
   {
     "lens_id": "067-413-247-484-040",
@@ -1720,7 +2011,10 @@
       "1-3",
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2028
   },
   {
     "lens_id": "131-578-433-073-899",
@@ -1740,7 +2034,10 @@
       "4-3",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "DE",
+    "applicant_type": "government",
+    "publication_year": 2013
   },
   {
     "lens_id": "005-724-271-510-64X",
@@ -1762,7 +2059,10 @@
       "2-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2018
   },
   {
     "lens_id": "157-386-109-733-565",
@@ -1776,7 +2076,10 @@
     "earliest_priority_year": 2021,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "173-877-838-011-243",
@@ -1790,7 +2093,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "107-466-639-838-133",
@@ -1808,7 +2114,10 @@
       "1-1",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2015
   },
   {
     "lens_id": "015-859-559-341-188",
@@ -1824,7 +2133,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "140-065-171-690-864",
@@ -1842,7 +2154,10 @@
       "3-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2028
   },
   {
     "lens_id": "184-939-714-567-338",
@@ -1860,7 +2175,10 @@
       "1-3",
       "2-3",
       "3-3"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "097-064-820-846-944",
@@ -1876,7 +2194,10 @@
     "itc_domains": [
       "1-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "001-414-950-255-16X",
@@ -1894,7 +2215,10 @@
       "1-3",
       "2-1",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "006-779-170-051-442",
@@ -1908,7 +2232,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "079-537-838-975-052",
@@ -1924,7 +2251,10 @@
     "itc_domains": [
       "1-3",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "184-110-278-832-224",
@@ -1940,7 +2270,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "005-851-494-664-867",
@@ -1956,7 +2289,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2007
   },
   {
     "lens_id": "155-636-289-114-118",
@@ -1972,7 +2308,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2027
   },
   {
     "lens_id": "124-889-076-117-746",
@@ -1988,7 +2327,10 @@
     "itc_domains": [
       "1-3",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2005
   },
   {
     "lens_id": "177-965-111-106-044",
@@ -2004,7 +2346,10 @@
     "itc_domains": [
       "3-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "072-879-166-598-260",
@@ -2018,7 +2363,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "IN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "151-457-957-350-265",
@@ -2028,7 +2376,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2008,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2010
   },
   {
     "lens_id": "025-484-478-070-421",
@@ -2038,7 +2389,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2020,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "003-473-789-662-019",
@@ -2056,7 +2410,10 @@
       "4-1",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "195-447-449-263-875",
@@ -2072,7 +2429,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "012-098-918-229-807",
@@ -2092,7 +2452,10 @@
       "2-2",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "DE",
+    "applicant_type": "academic",
+    "publication_year": 2018
   },
   {
     "lens_id": "175-515-910-707-478",
@@ -2110,7 +2473,10 @@
       "1-3",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2009
   },
   {
     "lens_id": "171-236-929-547-219",
@@ -2126,7 +2492,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2028
   },
   {
     "lens_id": "157-080-026-864-525",
@@ -2142,7 +2511,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "075-188-183-555-12X",
@@ -2160,7 +2532,10 @@
       "1-3",
       "2-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "166-168-140-974-00X",
@@ -2176,7 +2551,10 @@
     "itc_domains": [
       "1-2",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2024
   },
   {
     "lens_id": "083-922-840-729-294",
@@ -2190,7 +2568,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "108-017-237-072-190",
@@ -2206,7 +2587,10 @@
     "itc_domains": [
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2005
   },
   {
     "lens_id": "086-905-059-910-284",
@@ -2222,7 +2606,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2009
   },
   {
     "lens_id": "066-700-964-871-911",
@@ -2240,7 +2627,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "066-830-082-828-984",
@@ -2260,7 +2650,10 @@
       "2-1",
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "106-316-154-189-251",
@@ -2276,7 +2669,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "IN",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "102-985-417-307-057",
@@ -2290,7 +2686,10 @@
     "earliest_priority_year": 2021,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "190-957-408-605-072",
@@ -2306,7 +2705,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2027
   },
   {
     "lens_id": "011-118-438-213-944",
@@ -2320,7 +2722,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "060-418-175-333-208",
@@ -2334,7 +2739,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2015
   },
   {
     "lens_id": "016-714-216-957-473",
@@ -2350,7 +2758,10 @@
     "itc_domains": [
       "1-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "197-221-418-141-040",
@@ -2364,7 +2775,10 @@
     "earliest_priority_year": 2000,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2002
   },
   {
     "lens_id": "122-683-403-345-652",
@@ -2382,7 +2796,10 @@
       "1-1",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "006-899-749-833-650",
@@ -2400,7 +2817,10 @@
       "3-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "144-608-987-663-096",
@@ -2418,7 +2838,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "030-146-224-478-987",
@@ -2434,7 +2857,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2010
   },
   {
     "lens_id": "127-975-790-471-179",
@@ -2448,7 +2874,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2018
   },
   {
     "lens_id": "106-749-491-160-533",
@@ -2468,7 +2897,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "170-222-533-687-879",
@@ -2484,7 +2916,10 @@
     "itc_domains": [
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "138-925-636-822-632",
@@ -2500,7 +2935,10 @@
     "itc_domains": [
       "2-4",
       "3-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2027
   },
   {
     "lens_id": "195-001-827-236-609",
@@ -2518,7 +2956,10 @@
       "1-3",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2014
   },
   {
     "lens_id": "133-696-321-213-762",
@@ -2534,7 +2975,10 @@
     "itc_domains": [
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2014
   },
   {
     "lens_id": "023-647-875-256-327",
@@ -2548,7 +2992,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "007-756-401-016-746",
@@ -2566,7 +3013,10 @@
       "1-1",
       "4-1",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "181-793-099-235-420",
@@ -2582,7 +3032,10 @@
     "itc_domains": [
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2015
   },
   {
     "lens_id": "079-962-328-001-343",
@@ -2600,7 +3053,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "184-820-145-210-022",
@@ -2618,7 +3074,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "individual",
+    "publication_year": 2026
   },
   {
     "lens_id": "173-430-488-072-220",
@@ -2634,7 +3093,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2007
   },
   {
     "lens_id": "158-848-533-391-568",
@@ -2648,7 +3110,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2011
   },
   {
     "lens_id": "085-771-107-874-496",
@@ -2666,7 +3131,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "107-896-431-775-452",
@@ -2684,7 +3152,10 @@
       "4-1",
       "4-2",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "074-028-999-121-923",
@@ -2700,7 +3171,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "172-465-824-822-654",
@@ -2710,7 +3184,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2010,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "166-322-412-269-228",
@@ -2726,7 +3203,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2021
   },
   {
     "lens_id": "057-126-995-231-247",
@@ -2742,7 +3222,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "049-498-491-931-60X",
@@ -2758,7 +3241,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2016
   },
   {
     "lens_id": "076-002-904-651-655",
@@ -2776,7 +3262,10 @@
       "1-1",
       "1-3",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "151-101-353-478-56X",
@@ -2792,7 +3281,10 @@
     "itc_domains": [
       "1-3",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "090-624-178-296-68X",
@@ -2806,7 +3298,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "academic",
+    "publication_year": 2027
   },
   {
     "lens_id": "198-264-567-297-037",
@@ -2822,7 +3317,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "123-068-356-232-154",
@@ -2836,7 +3334,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "081-673-046-896-557",
@@ -2852,7 +3353,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "191-087-911-308-77X",
@@ -2874,7 +3378,10 @@
       "2-1",
       "2-4",
       "3-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "009-402-783-206-59X",
@@ -2890,7 +3397,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "129-906-991-787-544",
@@ -2908,7 +3418,10 @@
       "1-2",
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "091-032-739-059-332",
@@ -2924,7 +3437,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "188-481-953-181-073",
@@ -2944,7 +3460,10 @@
       "2-3",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "179-349-720-436-00X",
@@ -2962,7 +3481,10 @@
       "1-1",
       "2-4",
       "3-3"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2020
   },
   {
     "lens_id": "139-177-703-657-901",
@@ -2978,7 +3500,10 @@
     "itc_domains": [
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "059-668-529-951-06X",
@@ -2994,7 +3519,10 @@
     "itc_domains": [
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2016
   },
   {
     "lens_id": "018-702-484-520-07X",
@@ -3010,7 +3538,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "099-008-939-983-694",
@@ -3026,7 +3557,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2019
   },
   {
     "lens_id": "081-144-714-095-090",
@@ -3040,7 +3574,10 @@
     "earliest_priority_year": 2007,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2009
   },
   {
     "lens_id": "077-894-938-560-420",
@@ -3060,7 +3597,10 @@
       "2-3",
       "3-1",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "067-000-203-347-33X",
@@ -3076,7 +3616,10 @@
     "itc_domains": [
       "1-3",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "171-453-562-711-705",
@@ -3090,7 +3633,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "049-118-572-546-124",
@@ -3104,7 +3650,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "020-567-583-872-209",
@@ -3122,7 +3671,10 @@
       "1-3",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2018
   },
   {
     "lens_id": "189-255-942-818-076",
@@ -3136,7 +3688,10 @@
     "earliest_priority_year": 2021,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "146-133-991-240-033",
@@ -3152,7 +3707,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2009
   },
   {
     "lens_id": "176-315-007-150-685",
@@ -3172,7 +3730,10 @@
       "1-3",
       "2-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2004
   },
   {
     "lens_id": "005-260-563-678-038",
@@ -3190,7 +3751,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "178-612-758-891-234",
@@ -3208,7 +3772,10 @@
       "1-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2016
   },
   {
     "lens_id": "078-204-692-592-515",
@@ -3222,7 +3789,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "2-3"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "166-107-187-715-903",
@@ -3238,7 +3808,10 @@
     "itc_domains": [
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "177-629-798-626-069",
@@ -3256,7 +3829,10 @@
       "1-3",
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "191-787-736-120-266",
@@ -3276,7 +3852,10 @@
       "4-2",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "academic",
+    "publication_year": 2024
   },
   {
     "lens_id": "112-579-299-914-33X",
@@ -3292,7 +3871,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "151-868-000-857-162",
@@ -3310,7 +3892,10 @@
       "1-3",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "056-349-720-154-117",
@@ -3324,7 +3909,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "individual",
+    "publication_year": 2024
   },
   {
     "lens_id": "075-494-905-642-15X",
@@ -3342,7 +3930,10 @@
       "1-2",
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "003-574-430-131-601",
@@ -3358,7 +3949,10 @@
     "itc_domains": [
       "1-3",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "011-155-786-763-021",
@@ -3374,7 +3968,10 @@
     "itc_domains": [
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "AU",
+    "applicant_type": "corporate",
+    "publication_year": 2004
   },
   {
     "lens_id": "137-656-964-945-800",
@@ -3390,7 +3987,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "137-681-519-806-081",
@@ -3406,7 +4006,10 @@
     "itc_domains": [
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "066-780-743-823-740",
@@ -3422,7 +4025,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "108-905-245-900-975",
@@ -3438,7 +4044,10 @@
     "itc_domains": [
       "1-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "DE",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "074-973-932-782-336",
@@ -3458,7 +4067,10 @@
       "1-2",
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "188-347-823-894-115",
@@ -3472,7 +4084,10 @@
     "earliest_priority_year": 2014,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "051-205-758-133-659",
@@ -3490,7 +4105,10 @@
       "2-3",
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "167-228-745-840-731",
@@ -3506,7 +4124,10 @@
     "itc_domains": [
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2008
   },
   {
     "lens_id": "110-916-954-275-813",
@@ -3520,7 +4141,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "015-633-628-469-264",
@@ -3538,7 +4162,10 @@
       "1-1",
       "1-2",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "academic",
+    "publication_year": 2024
   },
   {
     "lens_id": "140-261-046-568-577",
@@ -3548,7 +4175,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2013,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2015
   },
   {
     "lens_id": "159-128-780-342-043",
@@ -3562,7 +4192,10 @@
     "earliest_priority_year": 2025,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2027
   },
   {
     "lens_id": "027-514-775-548-839",
@@ -3578,7 +4211,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2003
   },
   {
     "lens_id": "136-279-744-915-493",
@@ -3592,7 +4228,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "087-102-965-168-533",
@@ -3614,7 +4253,10 @@
       "2-3",
       "4-3",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "individual",
+    "publication_year": 2008
   },
   {
     "lens_id": "161-442-053-213-082",
@@ -3634,7 +4276,10 @@
       "2-1",
       "2-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "047-063-182-289-275",
@@ -3650,7 +4295,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2028
   },
   {
     "lens_id": "080-018-625-663-304",
@@ -3664,7 +4312,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2016
   },
   {
     "lens_id": "046-745-194-726-462",
@@ -3678,7 +4329,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "3-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2022
   },
   {
     "lens_id": "163-098-287-739-733",
@@ -3692,7 +4346,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "155-891-808-668-189",
@@ -3710,7 +4367,10 @@
       "1-3",
       "2-2",
       "2-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2018
   },
   {
     "lens_id": "091-492-537-700-969",
@@ -3726,7 +4386,10 @@
     "itc_domains": [
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "094-464-280-728-034",
@@ -3740,7 +4403,10 @@
     "earliest_priority_year": 2011,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2013
   },
   {
     "lens_id": "085-240-784-217-503",
@@ -3754,7 +4420,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "179-343-020-521-708",
@@ -3770,7 +4439,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "057-890-401-474-182",
@@ -3784,7 +4456,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "064-563-675-640-606",
@@ -3800,7 +4475,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "088-153-352-207-516",
@@ -3816,7 +4494,10 @@
     "itc_domains": [
       "3-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "057-104-683-891-53X",
@@ -3830,7 +4511,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "126-999-801-681-818",
@@ -3844,7 +4528,10 @@
     "earliest_priority_year": 1998,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2000
   },
   {
     "lens_id": "049-959-863-398-164",
@@ -3860,7 +4547,10 @@
     "itc_domains": [
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "138-229-002-501-571",
@@ -3876,7 +4566,10 @@
     "itc_domains": [
       "1-1",
       "3-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "005-782-477-405-912",
@@ -3892,7 +4585,10 @@
     "itc_domains": [
       "1-3",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "164-969-593-353-262",
@@ -3906,7 +4602,10 @@
     "earliest_priority_year": 2001,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2004
   },
   {
     "lens_id": "022-325-170-462-35X",
@@ -3922,7 +4621,10 @@
     "itc_domains": [
       "1-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "157-524-481-824-300",
@@ -3938,7 +4640,10 @@
     "itc_domains": [
       "1-3",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2011
   },
   {
     "lens_id": "148-191-134-992-722",
@@ -3952,7 +4657,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "197-318-850-392-878",
@@ -3966,7 +4674,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2027
   },
   {
     "lens_id": "101-625-661-751-728",
@@ -3976,7 +4687,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2011,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2013
   },
   {
     "lens_id": "017-568-561-050-737",
@@ -3992,7 +4706,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "075-993-616-758-021",
@@ -4008,7 +4725,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2018
   },
   {
     "lens_id": "132-942-314-295-063",
@@ -4024,7 +4744,10 @@
     "itc_domains": [
       "3-3",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "139-224-268-757-439",
@@ -4034,7 +4757,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "199-300-247-859-901",
@@ -4054,7 +4780,10 @@
       "1-3",
       "2-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "025-958-327-725-285",
@@ -4068,7 +4797,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2013
   },
   {
     "lens_id": "083-586-331-014-944",
@@ -4082,7 +4814,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "170-338-701-747-290",
@@ -4096,7 +4831,10 @@
     "earliest_priority_year": 2025,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2027
   },
   {
     "lens_id": "086-679-503-789-925",
@@ -4112,7 +4850,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "039-264-798-081-684",
@@ -4126,7 +4867,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "017-244-871-132-93X",
@@ -4142,7 +4886,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "010-656-860-798-257",
@@ -4156,7 +4903,10 @@
     "earliest_priority_year": 2003,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2005
   },
   {
     "lens_id": "054-226-595-173-243",
@@ -4172,7 +4922,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "080-379-115-676-897",
@@ -4188,7 +4941,10 @@
     "itc_domains": [
       "1-3",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2011
   },
   {
     "lens_id": "140-281-727-511-910",
@@ -4210,7 +4966,10 @@
       "4-2",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "076-148-625-760-885",
@@ -4220,7 +4979,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2015,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2017
   },
   {
     "lens_id": "039-298-309-565-609",
@@ -4234,7 +4996,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "079-622-290-392-500",
@@ -4248,7 +5013,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "174-300-276-041-976",
@@ -4264,7 +5032,10 @@
     "itc_domains": [
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "082-038-227-877-21X",
@@ -4280,7 +5051,10 @@
     "itc_domains": [
       "2-4",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2004
   },
   {
     "lens_id": "198-089-717-453-387",
@@ -4296,7 +5070,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2019
   },
   {
     "lens_id": "174-160-981-154-069",
@@ -4310,7 +5087,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2024
   },
   {
     "lens_id": "025-500-217-089-172",
@@ -4326,7 +5106,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2027
   },
   {
     "lens_id": "029-069-376-625-614",
@@ -4336,7 +5119,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2023,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "098-864-983-629-700",
@@ -4354,7 +5140,10 @@
       "2-3",
       "3-3",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "072-366-232-275-66X",
@@ -4370,7 +5159,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "073-364-110-607-934",
@@ -4386,7 +5178,10 @@
     "itc_domains": [
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "044-389-429-754-556",
@@ -4404,7 +5199,10 @@
       "4-2",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "099-389-968-727-78X",
@@ -4414,7 +5212,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2005,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2007
   },
   {
     "lens_id": "133-455-615-343-143",
@@ -4432,7 +5233,10 @@
       "1-1",
       "4-1",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "138-517-555-246-298",
@@ -4442,7 +5246,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2018,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "189-644-333-515-933",
@@ -4464,7 +5271,10 @@
       "2-1",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "112-145-811-503-647",
@@ -4478,7 +5288,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "3-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2011
   },
   {
     "lens_id": "193-912-995-611-062",
@@ -4498,7 +5311,10 @@
       "1-3",
       "2-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "individual",
+    "publication_year": 2028
   },
   {
     "lens_id": "151-026-847-189-39X",
@@ -4508,7 +5324,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2004,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "037-287-771-992-831",
@@ -4526,7 +5345,10 @@
       "2-4",
       "4-1",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "046-146-601-903-186",
@@ -4536,7 +5358,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2015,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "072-973-283-207-813",
@@ -4546,7 +5371,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "102-213-207-788-999",
@@ -4570,7 +5398,10 @@
       "4-1",
       "4-2",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2007
   },
   {
     "lens_id": "121-226-793-658-530",
@@ -4580,7 +5411,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2018,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2020
   },
   {
     "lens_id": "122-036-743-845-919",
@@ -4594,7 +5428,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "158-657-999-018-456",
@@ -4604,7 +5441,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2016,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "176-875-693-945-466",
@@ -4614,7 +5454,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2014,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2016
   },
   {
     "lens_id": "000-029-056-241-583",
@@ -4628,7 +5471,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2019
   },
   {
     "lens_id": "016-686-598-023-258",
@@ -4644,7 +5490,10 @@
     "itc_domains": [
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "063-363-893-746-836",
@@ -4664,7 +5513,10 @@
       "1-3",
       "2-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "118-889-681-961-69X",
@@ -4682,7 +5534,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "032-122-857-229-194",
@@ -4698,7 +5553,10 @@
     "itc_domains": [
       "2-2",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2003
   },
   {
     "lens_id": "082-454-014-925-321",
@@ -4708,7 +5566,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "029-606-345-629-891",
@@ -4718,7 +5579,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2004,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2005
   },
   {
     "lens_id": "129-725-575-095-167",
@@ -4734,7 +5598,10 @@
     "itc_domains": [
       "1-3",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "132-737-409-967-923",
@@ -4750,7 +5617,10 @@
     "itc_domains": [
       "3-1",
       "3-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 1999
   },
   {
     "lens_id": "090-954-456-871-923",
@@ -4768,7 +5638,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "075-941-801-946-687",
@@ -4778,7 +5651,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2018,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2021
   },
   {
     "lens_id": "045-768-128-612-884",
@@ -4788,7 +5664,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2001,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2002
   },
   {
     "lens_id": "110-435-904-405-416",
@@ -4798,7 +5677,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2025,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2028
   },
   {
     "lens_id": "165-164-759-540-42X",
@@ -4808,7 +5690,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2021,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "108-644-027-759-624",
@@ -4822,7 +5707,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "143-594-726-304-406",
@@ -4836,7 +5724,10 @@
     "earliest_priority_year": 2016,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "198-042-823-013-889",
@@ -4846,7 +5737,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2012,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2013
   },
   {
     "lens_id": "086-298-411-521-527",
@@ -4860,7 +5754,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2012
   },
   {
     "lens_id": "112-014-420-378-172",
@@ -4874,7 +5771,10 @@
     "earliest_priority_year": 2006,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2007
   },
   {
     "lens_id": "154-317-391-262-462",
@@ -4890,7 +5790,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "198-695-313-752-233",
@@ -4906,7 +5809,10 @@
     "itc_domains": [
       "2-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "028-568-605-898-801",
@@ -4920,7 +5826,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2011
   },
   {
     "lens_id": "112-194-015-896-380",
@@ -4934,7 +5843,10 @@
     "earliest_priority_year": 2000,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2001
   },
   {
     "lens_id": "060-284-040-635-232",
@@ -4944,7 +5856,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2014,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "JP",
+    "applicant_type": "individual",
+    "publication_year": 2016
   },
   {
     "lens_id": "001-051-644-686-316",
@@ -4954,7 +5869,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2008,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2009
   },
   {
     "lens_id": "152-617-524-964-153",
@@ -4964,7 +5882,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2011,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2013
   },
   {
     "lens_id": "088-545-383-933-572",
@@ -4978,7 +5899,10 @@
     "earliest_priority_year": 2011,
     "itc_domains": [
       "1-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "111-589-713-011-818",
@@ -4992,7 +5916,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "159-253-577-993-724",
@@ -5008,7 +5935,10 @@
     "itc_domains": [
       "3-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "individual",
+    "publication_year": 2018
   },
   {
     "lens_id": "071-339-597-446-919",
@@ -5022,7 +5952,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2019
   },
   {
     "lens_id": "066-977-584-622-691",
@@ -5040,7 +5973,10 @@
       "4-2",
       "4-4",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2017
   },
   {
     "lens_id": "046-642-328-646-002",
@@ -5058,7 +5994,10 @@
       "1-2",
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "023-245-136-893-304",
@@ -5072,7 +6011,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2019
   },
   {
     "lens_id": "067-638-790-127-480",
@@ -5082,7 +6024,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2001,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2002
   },
   {
     "lens_id": "023-016-263-468-942",
@@ -5098,7 +6043,10 @@
     "itc_domains": [
       "2-1",
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2009
   },
   {
     "lens_id": "111-430-539-073-575",
@@ -5108,7 +6056,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2021,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "144-454-692-105-039",
@@ -5118,7 +6069,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2026
   },
   {
     "lens_id": "076-073-757-586-483",
@@ -5128,7 +6082,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2007,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "001-825-827-873-401",
@@ -5138,7 +6095,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2016,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "154-758-167-286-228",
@@ -5152,7 +6112,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "089-313-299-786-761",
@@ -5162,7 +6125,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2018,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "027-442-483-323-785",
@@ -5176,7 +6142,10 @@
     "earliest_priority_year": 1998,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 1999
   },
   {
     "lens_id": "003-060-317-504-930",
@@ -5192,7 +6161,10 @@
     "itc_domains": [
       "2-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2018
   },
   {
     "lens_id": "154-270-959-341-812",
@@ -5202,7 +6174,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2012,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2014
   },
   {
     "lens_id": "175-457-570-249-34X",
@@ -5224,7 +6199,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2011
   },
   {
     "lens_id": "127-551-086-141-265",
@@ -5234,7 +6212,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "082-222-301-551-921",
@@ -5250,7 +6231,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2008
   },
   {
     "lens_id": "121-421-931-032-004",
@@ -5266,7 +6250,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "029-949-284-904-662",
@@ -5280,7 +6267,10 @@
     "earliest_priority_year": 2021,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "006-358-741-766-308",
@@ -5290,7 +6280,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2019,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "186-596-668-530-091",
@@ -5304,7 +6297,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2014
   },
   {
     "lens_id": "151-184-220-804-604",
@@ -5318,7 +6314,10 @@
     "earliest_priority_year": 2005,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2006
   },
   {
     "lens_id": "123-562-791-243-046",
@@ -5336,7 +6335,10 @@
       "2-1",
       "2-2",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "169-718-263-165-950",
@@ -5350,7 +6352,10 @@
     "earliest_priority_year": 2025,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2027
   },
   {
     "lens_id": "019-513-755-016-566",
@@ -5366,7 +6371,10 @@
     "itc_domains": [
       "3-1",
       "3-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "074-988-008-453-707",
@@ -5376,7 +6384,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2007,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2008
   },
   {
     "lens_id": "030-072-012-520-662",
@@ -5390,7 +6401,10 @@
     "earliest_priority_year": 2016,
     "itc_domains": [
       "3-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "010-840-038-884-847",
@@ -5404,7 +6418,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2024
   },
   {
     "lens_id": "005-989-927-644-311",
@@ -5414,7 +6431,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 1996,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 1998
   },
   {
     "lens_id": "153-458-535-453-894",
@@ -5430,7 +6450,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "185-449-211-960-861",
@@ -5446,7 +6469,10 @@
     "itc_domains": [
       "1-1",
       "3-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2007
   },
   {
     "lens_id": "078-187-996-081-771",
@@ -5460,7 +6486,10 @@
     "earliest_priority_year": 2000,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "IN",
+    "applicant_type": "government",
+    "publication_year": 2002
   },
   {
     "lens_id": "145-952-826-098-902",
@@ -5470,7 +6499,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2008,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2010
   },
   {
     "lens_id": "186-860-398-184-888",
@@ -5484,7 +6516,10 @@
     "earliest_priority_year": 2016,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2017
   },
   {
     "lens_id": "182-128-399-227-621",
@@ -5494,7 +6529,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "146-090-585-265-211",
@@ -5508,7 +6546,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2022
   },
   {
     "lens_id": "010-992-517-500-727",
@@ -5518,7 +6559,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2003,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2004
   },
   {
     "lens_id": "035-687-396-656-990",
@@ -5534,7 +6578,10 @@
     "itc_domains": [
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2010
   },
   {
     "lens_id": "040-029-340-207-535",
@@ -5544,7 +6591,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2016,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "149-532-984-103-361",
@@ -5554,7 +6604,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2005,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "061-462-013-618-280",
@@ -5564,7 +6617,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2020,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "171-341-559-269-075",
@@ -5574,7 +6630,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2014,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "030-329-357-505-565",
@@ -5590,7 +6649,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2027
   },
   {
     "lens_id": "058-568-576-158-190",
@@ -5600,7 +6662,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2023,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "175-161-558-314-791",
@@ -5614,7 +6679,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "184-689-077-429-784",
@@ -5624,7 +6692,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2011,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2012
   },
   {
     "lens_id": "056-787-609-572-396",
@@ -5638,7 +6709,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "075-759-480-818-981",
@@ -5656,7 +6730,10 @@
       "4-1",
       "4-2",
       "4-4"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "110-722-517-231-411",
@@ -5670,7 +6747,10 @@
     "earliest_priority_year": 2005,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2007
   },
   {
     "lens_id": "116-230-642-258-442",
@@ -5684,7 +6764,10 @@
     "earliest_priority_year": 1996,
     "itc_domains": [
       "1-1"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 1998
   },
   {
     "lens_id": "119-868-484-217-523",
@@ -5698,7 +6781,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2016
   },
   {
     "lens_id": "112-662-275-680-927",
@@ -5708,7 +6794,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2015,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "154-256-820-951-535",
@@ -5722,7 +6811,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-5"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "154-139-161-624-705",
@@ -5732,7 +6824,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "011-906-543-929-984",
@@ -5742,7 +6837,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2003,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2005
   },
   {
     "lens_id": "074-757-240-665-618",
@@ -5752,7 +6850,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2003,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2004
   },
   {
     "lens_id": "084-201-913-648-193",
@@ -5762,7 +6863,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "174-797-027-966-130",
@@ -5778,7 +6882,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "government",
+    "publication_year": 2014
   },
   {
     "lens_id": "109-106-302-948-939",
@@ -5794,7 +6901,10 @@
     "itc_domains": [
       "1-2",
       "1-3"
-    ]
+    ],
+    "jurisdiction": "KR",
+    "applicant_type": "individual",
+    "publication_year": 2009
   },
   {
     "lens_id": "111-262-704-693-082",
@@ -5808,7 +6918,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "101-957-760-117-352",
@@ -5818,7 +6931,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "013-903-705-689-442",
@@ -5832,7 +6948,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "014-885-855-780-356",
@@ -5846,7 +6965,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "177-774-917-971-406",
@@ -5856,7 +6978,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2023,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2025
   },
   {
     "lens_id": "196-712-472-823-026",
@@ -5866,7 +6991,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2023,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "042-224-802-948-597",
@@ -5882,7 +7010,10 @@
     "itc_domains": [
       "4-1",
       "4-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2014
   },
   {
     "lens_id": "126-872-794-013-45X",
@@ -5896,7 +7027,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "DE",
+    "applicant_type": "academic",
+    "publication_year": 2017
   },
   {
     "lens_id": "136-401-719-613-529",
@@ -5910,7 +7044,10 @@
     "earliest_priority_year": 2025,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2028
   },
   {
     "lens_id": "179-109-432-231-402",
@@ -5920,7 +7057,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2014,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2016
   },
   {
     "lens_id": "090-729-202-662-469",
@@ -5934,7 +7074,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "101-859-607-539-795",
@@ -5948,7 +7091,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "AU",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "129-171-424-976-221",
@@ -5958,7 +7104,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2023,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "JP",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "180-196-118-308-110",
@@ -5968,7 +7117,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2019,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2021
   },
   {
     "lens_id": "058-002-452-177-389",
@@ -5978,7 +7130,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2014,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "AU",
+    "applicant_type": "individual",
+    "publication_year": 2016
   },
   {
     "lens_id": "106-292-223-730-272",
@@ -5988,7 +7143,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2020,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "082-568-815-110-507",
@@ -6002,7 +7160,10 @@
     "earliest_priority_year": 1995,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 1997
   },
   {
     "lens_id": "020-726-954-325-331",
@@ -6016,7 +7177,10 @@
     "earliest_priority_year": 2014,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2016
   },
   {
     "lens_id": "090-336-438-217-698",
@@ -6026,7 +7190,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CA",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "186-206-025-710-754",
@@ -6036,7 +7203,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2020,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2023
   },
   {
     "lens_id": "004-909-204-014-421",
@@ -6046,7 +7216,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2005,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "137-535-750-236-047",
@@ -6056,7 +7229,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2021,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "JP",
+    "applicant_type": "individual",
+    "publication_year": 2024
   },
   {
     "lens_id": "151-217-097-892-036",
@@ -6070,7 +7246,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "053-869-005-808-716",
@@ -6084,7 +7263,10 @@
     "earliest_priority_year": 2016,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2018
   },
   {
     "lens_id": "195-905-250-271-427",
@@ -6094,7 +7276,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2006,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2009
   },
   {
     "lens_id": "001-758-811-727-242",
@@ -6104,7 +7289,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2019,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "042-993-014-781-614",
@@ -6114,7 +7302,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2021,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "084-738-999-002-165",
@@ -6124,7 +7315,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2010,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "IN",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "001-515-563-414-207",
@@ -6140,7 +7334,10 @@
     "itc_domains": [
       "2-1",
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2021
   },
   {
     "lens_id": "140-427-777-675-04X",
@@ -6154,7 +7351,10 @@
     "earliest_priority_year": 2004,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "government",
+    "publication_year": 2006
   },
   {
     "lens_id": "100-210-506-365-332",
@@ -6164,7 +7364,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2010,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "185-983-037-373-329",
@@ -6180,7 +7383,10 @@
     "itc_domains": [
       "1-3",
       "2-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2016
   },
   {
     "lens_id": "168-068-379-531-686",
@@ -6194,7 +7400,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2024
   },
   {
     "lens_id": "119-929-154-889-905",
@@ -6208,7 +7417,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "116-091-804-779-391",
@@ -6218,7 +7430,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2027
   },
   {
     "lens_id": "147-058-610-395-058",
@@ -6228,7 +7443,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2025,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2026
   },
   {
     "lens_id": "136-229-349-632-615",
@@ -6238,7 +7456,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2009,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2011
   },
   {
     "lens_id": "116-458-118-208-714",
@@ -6252,7 +7473,10 @@
     "earliest_priority_year": 2000,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2002
   },
   {
     "lens_id": "094-979-655-376-155",
@@ -6262,7 +7486,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2021,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "052-995-927-623-436",
@@ -6272,7 +7499,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "183-534-818-391-136",
@@ -6286,7 +7516,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2026
   },
   {
     "lens_id": "152-717-797-903-389",
@@ -6300,7 +7533,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2022
   },
   {
     "lens_id": "106-066-780-767-187",
@@ -6314,7 +7550,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "government",
+    "publication_year": 2023
   },
   {
     "lens_id": "169-630-418-590-040",
@@ -6328,7 +7567,10 @@
     "earliest_priority_year": 2014,
     "itc_domains": [
       "3-2"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "126-121-192-872-209",
@@ -6338,7 +7580,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2006,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "individual",
+    "publication_year": 2008
   },
   {
     "lens_id": "008-203-307-751-089",
@@ -6348,7 +7593,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2025,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2026
   },
   {
     "lens_id": "064-234-484-959-553",
@@ -6362,7 +7610,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "individual",
+    "publication_year": 2020
   },
   {
     "lens_id": "017-915-259-433-159",
@@ -6376,7 +7627,10 @@
     "earliest_priority_year": 2012,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2013
   },
   {
     "lens_id": "090-546-806-819-621",
@@ -6386,7 +7640,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2024,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "046-097-645-717-010",
@@ -6400,7 +7657,10 @@
     "earliest_priority_year": 2004,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2006
   },
   {
     "lens_id": "182-687-790-526-684",
@@ -6414,7 +7674,10 @@
     "earliest_priority_year": 2003,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2004
   },
   {
     "lens_id": "085-814-210-033-721",
@@ -6428,7 +7691,10 @@
     "earliest_priority_year": 2011,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2014
   },
   {
     "lens_id": "007-790-645-320-92X",
@@ -6442,7 +7708,10 @@
     "earliest_priority_year": 2007,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "corporate",
+    "publication_year": 2010
   },
   {
     "lens_id": "093-515-621-051-238",
@@ -6456,7 +7725,10 @@
     "earliest_priority_year": 2015,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2017
   },
   {
     "lens_id": "140-118-821-533-796",
@@ -6470,7 +7742,10 @@
     "earliest_priority_year": 2019,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2020
   },
   {
     "lens_id": "176-729-497-913-955",
@@ -6484,7 +7759,10 @@
     "earliest_priority_year": 2017,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2019
   },
   {
     "lens_id": "058-133-863-361-682",
@@ -6498,7 +7776,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "106-424-172-883-94X",
@@ -6512,7 +7793,10 @@
     "earliest_priority_year": 2007,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "JP",
+    "applicant_type": "academic",
+    "publication_year": 2009
   },
   {
     "lens_id": "031-451-498-369-259",
@@ -6526,7 +7810,10 @@
     "earliest_priority_year": 2018,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CA",
+    "applicant_type": "academic",
+    "publication_year": 2020
   },
   {
     "lens_id": "141-787-831-722-528",
@@ -6536,7 +7823,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2025,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "KR",
+    "applicant_type": "corporate",
+    "publication_year": 2027
   },
   {
     "lens_id": "089-870-989-292-090",
@@ -6550,7 +7840,10 @@
     "earliest_priority_year": 2013,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "individual",
+    "publication_year": 2015
   },
   {
     "lens_id": "046-139-877-776-768",
@@ -6564,7 +7857,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "166-482-176-700-989",
@@ -6578,7 +7874,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2021
   },
   {
     "lens_id": "182-259-652-740-235",
@@ -6588,7 +7887,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2022,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2024
   },
   {
     "lens_id": "161-597-792-810-151",
@@ -6602,7 +7904,10 @@
     "earliest_priority_year": 2020,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "corporate",
+    "publication_year": 2022
   },
   {
     "lens_id": "195-198-525-066-626",
@@ -6612,7 +7917,10 @@
     "itc_names": [],
     "source": "r2_keep",
     "earliest_priority_year": 2016,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2019
   },
   {
     "lens_id": "028-628-012-867-358",
@@ -6626,7 +7934,10 @@
     "earliest_priority_year": 2011,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "academic",
+    "publication_year": 2013
   },
   {
     "lens_id": "057-147-053-918-291",
@@ -6640,7 +7951,10 @@
     "earliest_priority_year": 2005,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "academic",
+    "publication_year": 2008
   },
   {
     "lens_id": "028-522-977-253-840",
@@ -6654,7 +7968,10 @@
     "earliest_priority_year": 2006,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "corporate",
+    "publication_year": 2007
   },
   {
     "lens_id": "004-002-361-896-362",
@@ -6668,7 +7985,10 @@
     "earliest_priority_year": 2006,
     "itc_domains": [
       "1-3"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2008
   },
   {
     "lens_id": "183-394-187-583-366",
@@ -6682,7 +8002,10 @@
     "earliest_priority_year": 2022,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "individual",
+    "publication_year": 2024
   },
   {
     "lens_id": "082-650-344-541-441",
@@ -6696,7 +8019,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "063-263-776-157-292",
@@ -6710,7 +8036,10 @@
     "earliest_priority_year": 2023,
     "itc_domains": [
       "2-2"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2025
   },
   {
     "lens_id": "036-670-377-915-876",
@@ -6724,7 +8053,10 @@
     "earliest_priority_year": 2024,
     "itc_domains": [
       "4-1"
-    ]
+    ],
+    "jurisdiction": "DE",
+    "applicant_type": "corporate",
+    "publication_year": 2025
   },
   {
     "lens_id": "084-709-410-687-85X",
@@ -6740,7 +8072,10 @@
     "itc_domains": [
       "1-1",
       "4-1"
-    ]
+    ],
+    "jurisdiction": "CN",
+    "applicant_type": "government",
+    "publication_year": 2016
   },
   {
     "lens_id": "085-032-228-805-703",
@@ -6756,7 +8091,10 @@
     "itc_domains": [
       "1-1",
       "1-2"
-    ]
+    ],
+    "jurisdiction": "AU",
+    "applicant_type": "government",
+    "publication_year": 2022
   },
   {
     "lens_id": "079-861-750-274-774",
@@ -6774,7 +8112,10 @@
       "1-1",
       "4-1",
       "4-5"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "government",
+    "publication_year": 2024
   },
   {
     "lens_id": "087-131-452-494-774",
@@ -6790,7 +8131,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2008
   },
   {
     "lens_id": "056-379-454-515-406",
@@ -6800,7 +8144,10 @@
     "itc_names": [],
     "source": "rescue",
     "earliest_priority_year": 1995,
-    "itc_domains": []
+    "itc_domains": [],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 1998
   },
   {
     "lens_id": "012-217-080-830-242",
@@ -6814,7 +8161,10 @@
     "earliest_priority_year": 2010,
     "itc_domains": [
       "3-2"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2012
   },
   {
     "lens_id": "173-737-705-692-466",
@@ -6830,7 +8180,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "WO",
+    "applicant_type": "academic",
+    "publication_year": 2025
   },
   {
     "lens_id": "012-995-189-098-391",
@@ -6846,7 +8199,10 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "EP",
+    "applicant_type": "academic",
+    "publication_year": 2023
   },
   {
     "lens_id": "046-161-733-816-880",
@@ -6862,6 +8218,9 @@
     "itc_domains": [
       "1-1",
       "2-4"
-    ]
+    ],
+    "jurisdiction": "US",
+    "applicant_type": "corporate",
+    "publication_year": 2009
   }
 ]
