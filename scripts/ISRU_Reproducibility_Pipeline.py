@@ -3,7 +3,7 @@
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  ISRU Construction Patent Analysis — Reproducibility Pipeline              ║
-║                                                                              ║
+║  Version: 1.0                                                              ║
 ║  License: CC BY 4.0                                                        ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -14,19 +14,15 @@ pipeline for ISRU (In-Situ Resource Utilization) Construction technologies.
 
 DESIGN CONCEPT
 --------------
-This package has two components:
+This script is the REUSABLE PIPELINE component of the repository. It is designed
+for portability: subsequent researchers can define their own keyword lists, CPC/IPC
+code prefixes, and domain taxonomy, supply their own patent dataset, and follow the
+same analytical procedure (tagging → portfolio → network → Jaccard → leadership)
+to produce comparable results for related technology domains.
 
-  (A) Exact replication package — the data/ directory contains all constants,
-      matrices, and per-record screening decisions needed to reproduce the
-      code-generated figures and verify the analytical values reported in the
-      manuscript, using the same 453-family dataset.
-
-  (B) Reusable analysis pipeline — this script implements a parameterized
-      pipeline that subsequent researchers can apply to their OWN datasets:
-        1. Define their OWN keyword lists, CPC/IPC code prefixes, and domain taxonomy
-        2. Supply their OWN patent dataset (e.g., from Lens.org, Espacenet, or USPTO)
-        3. Follow the SAME analytical procedure (tagging → portfolio → network →
-           Jaccard → leadership) to produce comparable results
+For EXACT REPLICATION of the manuscript's figures and tables, use the companion
+script `generate_all_figures.py`, which reads directly from the pre-computed data
+in `isru_data.py` and the tagged dataset in `phase2_453_families.json`.
 
 HOW TO USE (FOR SUBSEQUENT RESEARCHERS)
 ---------------------------------------
@@ -71,9 +67,9 @@ DEPENDENCIES
 REFERENCE
 ---------
   [Your citation here, e.g.:]
-  Lee, Y. (2026). WBS-based patent landscape of ISRU construction:
-  technology convergence and private-sector entry opportunities.
-  Acta Astronautica (under review).
+  Lee, Y. S. (2026). Patent-based technology landscape analysis of ISRU
+  construction: An integrated classification and convergence approach.
+  Acta Astronautica, xx(x), xxx–xxx.
 """
 
 import pandas as pd
@@ -500,15 +496,18 @@ def compute_cpc_network(df, col_map, delimiter):
                 adj[cpcs_l[i]][cpcs_l[j]] += 1
                 adj[cpcs_l[j]][cpcs_l[i]] += 1
 
-    # Degree centrality (weighted, normalized by N-1)
-    N = len(cpc_list)
-    max_edges = N - 1
+    # Degree centrality (weighted)
+    max_edges = len(cpc_list) - 1
     degree = {c: sum(adj[c].values()) / max_edges if max_edges > 0 else 0
               for c in cpc_list}
 
     # Betweenness centrality (BFS shortest-path approximation)
-    # Normalized by (N-1)(N-2)/2 — the number of unordered pairs
-    # excluding the node itself — following Freeman (1977).
+    # Implementation note: This uses an unweighted BFS to find shortest
+    # paths between all pairs, counting how often each node appears as an
+    # intermediary. The result is normalized by (N-1)(N-2)/2 where N is the
+    # number of nodes. This is a simplified version of the Brandes (2001)
+    # algorithm suitable for small networks (N ≤ 50). For larger networks,
+    # consider using networkx.betweenness_centrality() instead.
     between = {c: 0 for c in cpc_list}
     for start in cpc_list:
         visited = {start}
@@ -522,9 +521,11 @@ def compute_cpc_network(df, col_map, delimiter):
                     queue.append((nbr, new_path))
                     for mid in new_path[1:-1]:
                         between[mid] += 1
-    # Normalize betweenness
-    norm = (N - 1) * (N - 2) / 2 if N > 2 else 1
-    between = {c: v / norm for c, v in between.items()}
+    # Normalize by the number of node pairs
+    n_nodes = len(cpc_list)
+    norm = (n_nodes - 1) * (n_nodes - 2) / 2
+    if norm > 0:
+        between = {c: v / norm for c, v in between.items()}
 
     # Greedy modularity community detection
     print("  Running greedy modularity community detection...")
@@ -574,46 +575,62 @@ def compute_jaccard(df, itc_rules, col_map, delimiter, method='family'):
 
     Parameters
     ----------
-    method : str
-        'family' (default) — Jaccard over patent-family sets per domain.
-            J(A,B) = |families_A ∩ families_B| / |families_A ∪ families_B|
-            This is the method used in the manuscript.
-        'cpc' — Jaccard over CPC-code sets per domain.
-            J(A,B) = |CPCs_A ∩ CPCs_B| / |CPCs_A ∪ CPCs_B|
+    method : str, default 'family'
+        'family' — J(A,B) = |F_A ∩ F_B| / |F_A ∪ F_B|, where F is the
+            set of patent-family indices tagged to each domain.
+            This is the definition used in the manuscript (§3.3, Figure 5).
+        'cpc' — J(A,B) = |C_A ∩ C_B| / |C_A ∪ C_B|, where C is the
+            pooled set of CPC codes appearing on patents in each domain.
+            This alternative measures shared classification breadth and
+            may be useful for exploratory analysis on new datasets.
     """
     print(f"\n[4/5] Jaccard Similarity Analysis (method='{method}')...")
 
     domains = sorted(itc_rules.keys())
     n = len(domains)
 
+    mat = np.zeros((n, n))
+
     if method == 'family':
-        domain_sets = {}
-        for domain_id in domains:
+        # Patent-family-based Jaccard (manuscript definition)
+        domain_families = {}
+        for domain_id in itc_rules:
             mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
-            domain_sets[domain_id] = set(df[mask].index)
+            domain_families[domain_id] = set(df[mask].index)
+
+        for i in range(n):
+            for j in range(n):
+                if i == j:
+                    mat[i, j] = 1.0
+                else:
+                    inter = len(domain_families[domains[i]] & domain_families[domains[j]])
+                    union = len(domain_families[domains[i]] | domain_families[domains[j]])
+                    mat[i, j] = inter / union if union > 0 else 0
+
     elif method == 'cpc':
+        # CPC-code-set-based Jaccard (alternative definition)
         cpc_col = col_map['cpc']
-        domain_sets = {}
-        for domain_id in domains:
+        domain_cpcs = {}
+        for domain_id in itc_rules:
             mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
             dp = df[mask]
             cpcs = set()
             for _, row in dp.iterrows():
                 codes = [c.strip() for c in str(row[cpc_col]).split(delimiter) if c.strip()]
                 cpcs.update(codes)
-            domain_sets[domain_id] = cpcs
+            domain_cpcs[domain_id] = cpcs
+
+        for i in range(n):
+            for j in range(n):
+                if i == j:
+                    mat[i, j] = 1.0
+                else:
+                    inter = len(domain_cpcs[domains[i]] & domain_cpcs[domains[j]])
+                    union = len(domain_cpcs[domains[i]] | domain_cpcs[domains[j]])
+                    mat[i, j] = inter / union if union > 0 else 0
+
     else:
         raise ValueError(f"Unknown Jaccard method: '{method}'. Use 'family' or 'cpc'.")
-
-    mat = np.zeros((n, n))
-    for i in range(n):
-        for j in range(n):
-            if i == j:
-                mat[i, j] = 1.0
-            else:
-                inter = len(domain_sets[domains[i]] & domain_sets[domains[j]])
-                union = len(domain_sets[domains[i]] | domain_sets[domains[j]])
-                mat[i, j] = inter / union if union > 0 else 0
 
     # Sorted pairs
     pairs = []

@@ -26,7 +26,7 @@ desktop.ini
 *.xlsx
 
 # Archives
-reproduction_package_20260402.zip
+reproduction_package_*.zip
 
 # Manuscript (not distributed via GitHub)
 *.docx

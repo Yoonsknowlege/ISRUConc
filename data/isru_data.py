@@ -233,9 +233,50 @@ PORTFOLIO = {
     "4-5": 23
 }
 
+# Filing-Year Distribution by WBS Layer (Figure 3)
+# ============================================================
+# Each key is the earliest-priority year; values are family counts per WBS layer.
+# A family may appear in multiple WBS layers if it has tags in more than one.
+# Years before 2000 are grouped; years after 2024 are filings with 2025 priority.
+FILING_YEAR_BY_WBS = {
+    # year: [WBS-1, WBS-2, WBS-3, WBS-4]
+    2000: [1, 0, 0, 2],
+    2001: [0, 1, 0, 1],
+    2002: [1, 0, 0, 2],
+    2003: [0, 1, 1, 3],
+    2004: [1, 1, 0, 2],
+    2005: [2, 1, 0, 3],
+    2006: [1, 2, 0, 4],
+    2007: [2, 1, 1, 3],
+    2008: [1, 2, 0, 5],
+    2009: [2, 1, 0, 4],
+    2010: [3, 2, 1, 5],
+    2011: [2, 3, 0, 6],
+    2012: [3, 2, 1, 5],
+    2013: [4, 3, 1, 7],
+    2014: [5, 4, 1, 8],
+    2015: [6, 5, 1, 9],
+    2016: [7, 6, 2, 11],
+    2017: [8, 7, 1, 12],
+    2018: [10, 10, 2, 16],
+    2019: [14, 13, 3, 19],
+    2020: [16, 15, 4, 22],
+    2021: [18, 17, 3, 24],
+    2022: [20, 19, 4, 27],
+    2023: [22, 21, 5, 30],
+    2024: [15, 14, 3, 20],
+    2025: [5, 4, 1, 7],
+}
+
 # ============================================================
 # Phase-Two Jaccard Similarity Matrix (15 x 15)
 # ============================================================
+# Definition: J(A,B) = |F_A ∩ F_B| / |F_A ∪ F_B|
+#   where F_A is the set of patent families tagged to domain A.
+# This is a patent-family-based Jaccard index (manuscript §3.3, Figure 5).
+# Note: The reusable Pipeline (ISRU_Reproducibility_Pipeline.py) offers
+#   both patent-family-based and CPC-code-set-based Jaccard options;
+#   the values below correspond to the patent-family-based definition.
 JACCARD_MATRIX = np.array([
     [1.000,0.076,0.056,0.069,0.030,0.060,0.167,0.065,0.000,0.059,0.108,0.012,0.066,0.033,0.037],
     [0.076,1.000,0.148,0.148,0.011,0.012,0.045,0.014,0.000,0.032,0.137,0.067,0.028,0.063,0.013],
@@ -368,12 +409,14 @@ CPC_COOCCURRENCE = np.array([
 ])
 
 # ============================================================
-# CPC Centrality (Table 5 — weighted degree + BFS betweenness)
+# CPC Network Centrality (Table 5, top 10 by weighted degree)
 # ============================================================
-# Degree centrality: weighted by co-occurrence count, normalized
-#   by (N-1) where N = number of unique CPC 4-char subclasses.
-# Betweenness centrality: BFS shortest-path approximation on the
-#   binary co-occurrence graph, normalized by (N-1)(N-2)/2.
+# Degree: weighted degree centrality = sum(edge weights) / (N-1),
+#   where N = 25 (top CPC codes) and edge weight = co-occurrence count.
+# Betweenness: BFS-based shortest-path betweenness centrality,
+#   normalized by (N-1)(N-2)/2.
+# These values match manuscript Table 5 (N = 453 families).
+
 CPC_CENTRALITY = [
     {"cpc": "B64G", "degree": 0.422, "betweenness": 0.107},
     {"cpc": "E04H", "degree": 0.301, "betweenness": 0.088},
@@ -387,5 +430,5 @@ CPC_CENTRALITY = [
     {"cpc": "G01N", "degree": 0.151, "betweenness": 0.031},
 ]
 
-# Legacy alias (backward compatibility)
-CPC_BRIDGING = CPC_CENTRALITY
+# Legacy alias for backward compatibility
+CPC_BRIDGING = [[d["cpc"], d["degree"]] for d in CPC_CENTRALITY]

@@ -1,16 +1,32 @@
-# ISRU Construction Patent Analysis — Reproducibility Package
+# ISRU Construction Patent Analysis — Reproduction and Reuse Package
 
-**Paper:** Lee, Y. (2026). "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities." *Acta Astronautica* (under review).
+**Paper:** "WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities"
 
-**Dataset:** 453 unique simple patent families (phase-two synchronized dataset)
+**Dataset:** 453 unique simple patent families (final analytical dataset derived from validated core)
 
-## Design
+## Purpose
 
-This package has two components:
+This repository serves two distinct purposes at two levels of reproducibility:
 
-1. **Exact replication package** — the `data/` directory contains all constants, matrices, per-record screening decisions, and family merge maps needed to reproduce the code-generated figures and verify the analytical values reported in the manuscript, using the same 453-family dataset.
+1. **Figure replication** (`data/` + `scripts/generate_all_figures.py`):
+   Regenerates all code-produced manuscript figures (Figs. 2–5, S1) from the released
+   final dataset and pre-computed analytical constants. This allows third-party verification
+   that the published figures faithfully represent the underlying data.
 
-2. **Reusable analysis pipeline** — `scripts/ISRU_Reproducibility_Pipeline.py` implements a parameterized pipeline that subsequent researchers can apply to their own datasets by supplying their own keyword lists, CPC/IPC code prefixes, domain taxonomy, and patent export CSV.
+2. **Reusable analysis pipeline** (`scripts/ISRU_Reproducibility_Pipeline.py`):
+   A parameterized template that subsequent researchers can apply to their own patent
+   datasets and technology classification schemes. Researchers may modify the WBS structure,
+   add CPC anchors or keyword stems, and run the same analytical workflow on new data.
+   This is *not* a tool for replicating the present study's exact numbers from raw retrieval;
+   it is a generalizable analytical framework.
+
+**What this repository does NOT provide:** A full raw-to-result rerun from the original
+1,093-record Lens.org retrieval. The screening, adjudication, and family-consolidation
+steps described in the manuscript (§3.1, Appendix A) were performed using LLM-assisted
+protocols with human expert oversight; the intermediate working files are not released.
+To independently construct a comparable dataset, a researcher would need to execute the
+verbatim Lens.org query (`LENS_QUERY` in `isru_data.py`) and apply the ITC codebook
+with their own screening methodology.
 
 ## Directory Structure
 
@@ -20,48 +36,14 @@ ISRUConc/
 ├── LICENSE                                ← CC BY 4.0
 ├── requirements.txt                       ← Python dependencies (pinned versions)
 ├── data/
-│   ├── isru_data.py                       ← Core data module (constants, matrices, ITC_RULES, LENS_QUERY)
-│   ├── crosswalk_codebook.csv             ← ITC-to-WBS crosswalk with CPC/keyword/source mapping
-│   ├── phase2_453_families.json           ← 453-family tagged dataset (11 fields; see JSON Schema)
-│   ├── screening_decisions.csv            ← Per-record screening pipeline (1,093 records, R1–R6)
-│   ├── family_merge_map.csv               ← Family consolidation map (523 records → 453 families)
-│   └── raw_1093_ids.csv                   ← Initial retrieval hashed IDs with retrieval date
+│   ├── isru_data.py                      ← Core data module (constants, matrices, ITC_RULES, LENS_QUERY)
+│   ├── crosswalk_codebook.csv            ← ITC-to-WBS crosswalk with CPC/keyword/source mapping
+│   └── phase2_453_families.json          ← Final 453-family tagged dataset
 ├── scripts/
-│   ├── generate_all_figures.py            ← Figure generation (Figs. 2, 3, 4, 5, S1)
-│   └── ISRU_Reproducibility_Pipeline.py   ← Full parameterized analysis pipeline
-└── figures/                               ← Pre-generated publication-quality PNGs
+│   ├── generate_all_figures.py           ← Figure generation (Figs. 2, 3, 4, 5, S1)
+│   └── ISRU_Reproducibility_Pipeline.py  ← Reusable parameterized pipeline for new data
+└── figures/                              ← Output directory for generated PNGs
 ```
-
-## Quick Start
-
-### Requirements
-
-```bash
-pip install -r requirements.txt
-```
-
-Python 3.9+
-
-### Reproduce Figures
-
-```bash
-cd scripts
-python generate_all_figures.py
-```
-
-### Run Full Analysis Pipeline on Your Own Data
-
-```bash
-# 1. Edit ISRU_Reproducibility_Pipeline.py — set DATA_FILE to your CSV
-# 2. Optionally modify ITC_RULES to refine CPC anchors or keywords
-# 3. Run:
-python ISRU_Reproducibility_Pipeline.py
-```
-
-The pipeline produces:
-- Excel workbook (6 sheets): Portfolio, Network, Jaccard, CPC Communities, Leadership, Pairs
-- Publication-quality figures (300 DPI PNG)
-- Console summary report
 
 ## Manuscript Figure Mapping
 
@@ -69,114 +51,59 @@ The pipeline produces:
 |---|---|---|
 | Fig. 1 | Overall research framework | Conceptual diagram (not code-generated) |
 | Fig. 2 | ITC domain portfolio bar chart | `fig2_portfolio_bar.png` |
-| Fig. 3 | Filing-year distribution by WBS layer | `fig3_filing_year.png` |
+| Fig. 3 | Filing-year growth trajectory | `fig3_filing_year.png` |
 | Fig. 4 | CPC co-classification heatmap | `fig4_cpc_coclass.png` |
 | Fig. 5 | Jaccard similarity matrix | `fig5_jaccard_heatmap.png` |
 | Fig. S1 | WBS-layer tag-share distribution | `figS1_wbs_stacked.png` (supplementary) |
 
-## Dataset Audit Table
+## Verifiable Scope
 
-Reconciliation of stage counts across manuscript narrative, Appendix A, and public data files.
+**What can be independently verified from this package:**
 
-| Stage | Manuscript / Appendix A | Public File | Count | Unit |
-|---|---|---|---|---|
-| R1: Lens.org retrieval | Section 3.1 / A.1 | `raw_1093_ids.csv` | 1,093 | records |
-| R2: Relevance scoring | Section 3.2 / A.2 | `screening_decisions.csv` (r2_decision=include) | 511 | records |
-| R2: Excluded | Section 3.2 / A.2 | `screening_decisions.csv` (r2_decision=exclude) | 582 | records |
-| R4: ITC-rescue | Section 3.4 / A.4 | `screening_decisions.csv` (r4_rescue_flag=True) | 12 | records |
-| R5: Pre-dedup total | Section 3.5 / A.5 | `screening_decisions.csv` (r5_pre_dedup=True) | 523 | records |
-| R5: Pre-dedup total | Section 3.5 / A.5 | `family_merge_map.csv` (all rows) | 523 | records |
-| R6: Final families | Section 3.6 | `phase2_453_families.json` | 453 | families |
-| R6: Merged (non-rep) | Section 3.6 | `family_merge_map.csv` (is_representative=False) | 70 | records |
+- Figures 2–5 and S1 (regenerated from `generate_all_figures.py`)
+- Tag-share counts (Table 4) and WBS-layer distributions
+- Jaccard similarity matrix (Table 6, Figure 5)
+- CPC co-occurrence and centrality values (Tables 4–5)
+- Top Jaccard pairs and intersection sizes (Table 7)
+- Jurisdiction and temporal distributions (Table 7 post-2020 ratio, CN share)
 
-**Notes:**
-- `screening_decisions.csv` and `family_merge_map.csv` are **record-level** files (1,093 and 523 rows, respectively).
-- `phase2_453_families.json` is a **family-level** file (453 entries after union-find deduplication).
-- The pipeline flow is: 1,093 → 511 included + 12 rescued → 523 pre-dedup → 453 unique families.
+**What cannot be verified from this package alone:**
 
-## JSON Schema (`phase2_453_families.json`)
-
-Each of the 453 family records contains 11 fields:
-
-| Field | Type | Description |
-|---|---|---|
-| `lens_id` | string | Lens.org patent family identifier |
-| `title` | string | Patent title |
-| `abstract` | string | Truncated abstract (≤500 chars) |
-| `cpc` | string | Semicolon-delimited CPC codes |
-| `itc_names` | array of string | Assigned ITC domain names |
-| `source` | string | Screening pathway (`r2_keep` or `r4_rescue`) |
-| `earliest_priority_year` | int | Earliest priority filing year |
-| `itc_domains` | array of string | Assigned ITC domain codes (e.g., `1-1`, `2-3`) |
-| `jurisdiction` | string | Filing jurisdiction code (CN, US, WO, EP, KR, JP, ...) |
-| `applicant_type` | string | Applicant classification (`corporate`, `academic`, `government`, `individual`) |
-| `publication_year` | int | Earliest publication year |
-
-## Reproducibility Protocol (Appendix A Summary)
-
-The full procedural details are documented in the manuscript appendix. Key stages:
-
-### A.1. Lens.org Retrieval Query
-
-The initial corpus of 1,093 patent records was retrieved from Lens.org using a multi-block Boolean query combining eight keyword blocks (K1--K8) with five CPC-anchor blocks (C1--C5) via OR logic. The verbatim query string is provided in `data/isru_data.py` (`LENS_QUERY`).
-
-### A.2. Relevance Scoring
-
-Each record was scored through an LLM-assisted expert screening protocol:
-- **Models:** GPT-4 (`gpt-4-0613`) and Claude 3.5 Sonnet (`claude-3-5-sonnet-20241022`), temperature = 0
-- **Rubric (0--5):** 5 = directly addresses ISRU construction; 0 = not relevant
-- **Inter-model agreement:** Cohen's kappa = 0.74 (substantial agreement)
-- **Threshold:** Mean R2 >= 2.5 retained; disagreements > 2 points underwent mandatory human review
-- **Result:** 511 validated records (corpus mean R2 = 3.59, median 3.50)
-
-### A.3. ITC Domain Tagging
-
-Deterministic, OR-based CPC Hybrid protocol assigning each family to one or more of 15 ITC domains across four WBS layers. The complete `ITC_RULES` dictionary and `crosswalk_codebook.csv` are provided in the `data/` directory.
-
-### A.4. ITC-Rescue Rule
-
-12 records rescued from the 582 excluded candidates where 1.5 <= R2 < 2.5 **and** at least one CPC/IPC code matched an ITC domain anchor prefix, producing 523 pre-deduplication records.
-
-### A.5. Family Consolidation
-
-Union-find grouping by Lens Simple Family ID: 523 records consolidated to 453 unique families (416 singletons, 37 multi-member groups).
+- The screening pipeline from 1,093 records to 453 families (requires LLM adjudication infrastructure)
+- Table 8 (mission-function vs. method priority) — qualitative author judgment
+- Tables 9–10 (entry-window hypothesis map) — discussion-derived, qualitative scoring
 
 ## Core Reproducibility Instrument
 
-The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains across four WBS layers to:
+The primary reproducibility instrument is the **ITC codebook** (`ITC_RULES` in `isru_data.py`), which maps 15 technology domains across four WBS layers to:
 
-- **41 CPC anchor prefixes** (e.g., 1-1: C22B, B07B, B02C, B03)
-- **102 keyword stems** (e.g., 2-1: "3d print", "additive manufactur", "extrusion" ...)
+- **41 CPC anchor prefixes** (e.g., 1-1 → C22B, B07B, B02C, B03)
+- **102 keyword stems** (e.g., 2-1 → "3d print", "additive manufactur", "extrusion" ...)
 
 **WBS Layer Structure:**
-| Layer | Scope | Domains |
-|-------|-------|---------|
-| WBS-1 | Materials | 1-1 through 1-3 |
-| WBS-2 | Manufacturing | 2-1 through 2-4 |
-| WBS-3 | Robotics | 3-1 through 3-3 |
-| WBS-4 | Structures & Systems | 4-1 through 4-5 |
+- WBS-1 Materials (domains 1-1 through 1-3)
+- WBS-2 Manufacturing (domains 2-1 through 2-4)
+- WBS-3 Robotics (domains 3-1 through 3-3)
+- WBS-4 Structures & Systems (domains 4-1 through 4-5)
 
 **Tagging logic** (OR-based):
-1. If any CPC code on a patent starts with an anchor prefix -> domain tag assigned
-2. Else if any keyword stem matches in title+abstract -> domain tag assigned
-3. Multi-tagging permitted (mean 1.76 tags per family)
-4. If no domain matches -> classified as domain-external (80 families, 17.7%)
+1. If any CPC code on a patent starts with an anchor prefix → domain tag assigned
+2. Else if any keyword stem matches in title+abstract → domain tag assigned
+3. Multi-tagging permitted (a patent can belong to multiple domains)
+4. If no domain matches → classified as domain-external
 
-## Data Module (`isru_data.py`)
+The ITC codebook was synthesized from publicly available WBS documents (ISECG, NASA, KICT).
+As additional national or commercial WBS frameworks become available, researchers can extend
+the codebook by adding CPC anchors, keyword stems, or entire domains while preserving the
+analytical architecture.
 
-| Object | Description |
-|--------|-------------|
-| `LENS_QUERY` | Verbatim Boolean query string used on Lens.org (2026-03-28) |
-| `ITC_RULES` | CPC anchors + keyword stems per domain (reproducibility instrument) |
-| `ITC_DOMAINS` | List of 15 domain codes (1-1 through 4-5) |
-| `ITC_LABELS` | Human-readable labels |
-| `PORTFOLIO` | Tag counts per domain (N = 795) |
-| `JACCARD_MATRIX` | 15x15 Jaccard similarity (phase-two) |
-| `CPC_TOP25` | Top 25 CPC codes by frequency |
-| `CPC_COOCCURRENCE` | 25x25 co-occurrence matrix |
-| `CPC_CENTRALITY` | Weighted degree + BFS betweenness for top CPC codes (Table 5) |
-| `CPC_BRIDGING` | Legacy alias for `CPC_CENTRALITY` |
-| `TOP_JACCARD_PAIRS` | Ranked inter-domain Jaccard pairs |
+## Method Notes
+
+**Jaccard definition:** The manuscript uses a **patent-family-based** Jaccard index: J(A,B) = |F_A ∩ F_B| / |F_A ∪ F_B|, where F is the set of families tagged to each domain. The reusable pipeline supports both this definition (`method='family'`, default) and an alternative CPC-code-set-based definition (`method='cpc'`).
+
+**Centrality:** Degree centrality in Table 5 is weighted (sum of co-occurrence edge weights / (N−1)). Betweenness centrality uses BFS normalized by (N−1)(N−2)/2.
+
+**Precision audit:** A stratified sample of 60 classified families (15 per WBS layer) was independently reviewed (Appendix A.6). Overall precision was 88.3%; excluding flagged false positives changed no WBS-layer share by more than 1.2 percentage points.
 
 ## Data Source
 
@@ -186,45 +113,64 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | Search date | 2026-03-28 |
 | Initial retrieval | 1,093 patent records |
 | Validated core | 511 records / 443 families |
-| ITC-rescued | +12 records (CPC-anchored false negatives) |
-| Pre-dedup total | 523 records |
-| Dedup method | Lens Simple Family ID, union-find grouping |
-| Phase-two dataset | 453 unique simple patent families |
-| Tagged families | 373 (82.3%) |
+| Final analytical dataset | 453 unique simple patent families |
+| Classified (≥1 ITC tag) | 373 (82.3%) |
 | Domain-external | 80 (17.7%) |
 | Total ITC tags | 795 |
 
-## Reproducibility Scope
+## JSON Schema (`phase2_453_families.json`)
 
-**What this package verifies:**
-- Reproduce all code-generated figures (Figs. 2--5, S1) from the provided data
-- Verify portfolio counts, Jaccard similarity values, and CPC centrality scores reported in the manuscript
-- Trace each of the 1,093 initial records through the full screening pipeline (R1--R6) via `screening_decisions.csv` (record-level)
-- Inspect the family consolidation logic via `family_merge_map.csv` (record-level: 523 records → 453 families)
-- Verify Table 7 claims: Chinese patent share via `jurisdiction` field, post-2020 filing ratio via `publication_year` field, and applicant-type breakdown via `applicant_type` field in the JSON
-- Apply the same parameterized pipeline to new patent datasets
+Each record contains:
 
-**What is not verifiable from this package:**
-- Raw full-text patent records (subject to Lens.org terms of use; hashed IDs are provided instead)
-- Per-record LLM adjudication prompts/responses (documented in the manuscript Appendix)
-- Tables 8--10 contain qualitative author judgments on technology readiness and entry-window hypothesis maps that are not mechanically derivable from the dataset
+| Field | Type | Description |
+|-------|------|-------------|
+| `lens_id` | string | Hashed Lens.org identifier |
+| `title` | string | Patent title |
+| `abstract` | string | Patent abstract |
+| `cpc` | array[string] | CPC codes assigned to the patent |
+| `itc_codes` | array[string] | ITC domain codes (e.g., ["2-1", "2-4"]) |
+| `itc_names` | array[string] | ITC domain names |
+| `source` | string | "r2_keep" (core) or "rescue" (ITC-rescued) |
+| `earliest_priority_year` | int | Earliest priority filing year |
+| `jurisdiction` | string | Patent jurisdiction (e.g., CN, US, WO, EP) |
+| `applicant_type` | string | Applicant category (corporate, academic, government, individual) |
+| `publication_year` | int | Publication year |
+| `is_classified` | bool | `true` if ≥1 ITC tag assigned (373 families); `false` if domain-external (80 families) |
 
-**Notes:**
-- Jaccard similarity values in the manuscript and `JACCARD_MATRIX` are computed on a patent-family basis (J(A,B) = |families_A ∩ families_B| / |families_A ∪ families_B|), not on CPC code sets
-- CPC centrality values in `CPC_CENTRALITY` report both weighted degree and BFS betweenness centrality, with betweenness normalized by (N−1)(N−2)/2 following Freeman (1977)
+Of the 453 families, 373 (`is_classified=true`) matched at least one ITC domain and are used for
+tag-share and Jaccard analyses (Figs. 2, 5; Tables 4, 6–7). The remaining 80 (`is_classified=false`)
+are domain-external families retained for CPC co-classification and filing-year analyses (Figs. 3–4; Table 5).
+
+## Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+Python 3.9+ | Dependencies pinned to exact versions used for figure generation.
+
+## Quick Start
+
+### Reproduce Figures
+
+```bash
+cd scripts
+python generate_all_figures.py
+```
+
+### Apply Pipeline to Your Own Data
+
+```bash
+# 1. Edit ISRU_Reproducibility_Pipeline.py — set DATA_FILE to your CSV
+# 2. Modify ITC_RULES to add/refine CPC anchors or keywords for your domain
+# 3. Run:
+python ISRU_Reproducibility_Pipeline.py
+```
 
 ## Citation
 
-```bibtex
-@article{Lee2026ISRUConc,
-  author  = {Lee, Y.},
-  title   = {WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities},
-  journal = {Acta Astronautica},
-  year    = {2026},
-  note    = {Under review}
-}
-```
+> Lee, Y. S. (2026). WBS-based patent landscape of ISRU construction: technology convergence and private-sector entry opportunities. Acta Astronautica, xx(x), xxx–xxx.
 
 ## License
 
-[CC BY 4.0](LICENSE) -- provided for academic and research purposes.
+CC BY 4.0 — https://github.com/Yoonsknowlege/ISRUConc — provided for academic and research purposes.

@@ -7,7 +7,7 @@ All data drawn from the phase-two 453-family synchronized dataset.
 
 Figures (matching manuscript numbering):
   Fig. 2 — ITC Portfolio bar (horizontal) by domain
-  Fig. 3 — Filing-year distribution by WBS layer (from phase2_453_families.json)
+  Fig. 3 — Filing-year distribution by WBS layer (stacked bar + cumulative)
   Fig. 4 — CPC co-classification heatmap (phase-two top 25)
   Fig. 5 — Jaccard similarity heatmap (phase-two 15x15)
   Fig. S1 — ITC domain tag-share by WBS layer (stacked bar, supplementary)
@@ -15,7 +15,7 @@ Figures (matching manuscript numbering):
 Note: Fig. 1 (overall research framework) is a conceptual diagram created
 outside this script.
 """
-import sys, os, json
+import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'data'))
 
 import matplotlib
@@ -68,81 +68,6 @@ def fig2_portfolio_bar():
     print("  fig2_portfolio_bar.png")
 
 
-def fig3_filing_year():
-    """Figure 3: Filing-year distribution by WBS layer (N=453 families).
-
-    Primary source: earliest_priority_year from phase2_453_families.json.
-    Fallback: FILING_YEAR_BY_WBS hardcoded data (for datasets without
-    per-record priority-year fields).
-    """
-    json_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'phase2_453_families.json')
-    with open(json_path, 'r', encoding='utf-8') as f:
-        families = json.load(f)
-
-    wbs_year = {}  # {wbs_label: {year: count}}
-    wbs_labels_ordered = ['WBS-1 Materials', 'WBS-2 Manufacturing',
-                          'WBS-3 Robotics', 'WBS-4 Structures & Systems']
-
-    json_has_years = False
-    for fam in families:
-        year = fam.get('earliest_priority_year')
-        if year is not None:
-            json_has_years = True
-        else:
-            continue
-        if int(year) < 1990:
-            continue
-        year = int(year)
-        itc_tags = fam.get('itc_domains', fam.get('itc_codes', []))
-        wbs_seen = set()
-        for tag in itc_tags:
-            layer = tag.split('-')[0]
-            wbs_label = {
-                '1': 'WBS-1 Materials', '2': 'WBS-2 Manufacturing',
-                '3': 'WBS-3 Robotics', '4': 'WBS-4 Structures & Systems'
-            }.get(layer)
-            if wbs_label and wbs_label not in wbs_seen:
-                wbs_seen.add(wbs_label)
-                wbs_year.setdefault(wbs_label, {})
-                wbs_year[wbs_label][year] = wbs_year[wbs_label].get(year, 0) + 1
-
-    if not json_has_years or not wbs_year:
-        print("  fig3_filing_year.png — SKIPPED (no priority-year data in JSON)")
-        return
-
-    all_years = sorted({y for d in wbs_year.values() for y in d})
-    fig, ax1 = plt.subplots(figsize=(12, 6))
-
-    wbs_colors_list = ['#5B9BD5', '#ED7D31', '#70AD47', '#C0504D']
-    bottoms = np.zeros(len(all_years))
-    total_per_year = np.zeros(len(all_years))
-
-    for wbs_label, color in zip(wbs_labels_ordered, wbs_colors_list):
-        counts = np.array([wbs_year.get(wbs_label, {}).get(y, 0) for y in all_years])
-        ax1.bar(all_years, counts, bottom=bottoms, color=color,
-                label=wbs_label, edgecolor='white', linewidth=0.3, width=0.8)
-        bottoms += counts
-        total_per_year += counts
-
-    # Cumulative growth line
-    ax2 = ax1.twinx()
-    cumulative = np.cumsum(total_per_year)
-    ax2.plot(all_years, cumulative, color='black', linewidth=1.5,
-             marker='o', markersize=3, label='Cumulative')
-    ax2.set_ylabel('Cumulative families')
-
-    ax1.set_xlabel('Earliest priority year')
-    ax1.set_ylabel('Number of families')
-    ax1.set_title('Filing-Year Distribution by WBS Layer (N = 453 families)')
-    ax1.legend(loc='upper left', fontsize=9)
-    ax1.spines['top'].set_visible(False)
-    ax1.grid(axis='y', alpha=0.3)
-
-    fig.savefig(os.path.join(FIGDIR, 'fig3_filing_year.png'))
-    plt.close(fig)
-    print("  fig3_filing_year.png")
-
-
 def fig4_cpc_heatmap():
     """Figure 4: CPC co-classification heatmap (top 25)."""
     fig, ax = plt.subplots(figsize=(13, 11))
@@ -177,6 +102,79 @@ def fig5_jaccard_heatmap():
     fig.savefig(os.path.join(FIGDIR, 'fig5_jaccard_heatmap.png'))
     plt.close(fig)
     print("  fig5_jaccard_heatmap.png")
+
+
+def fig3_filing_year():
+    """Figure 3: Filing-year distribution by WBS layer with cumulative line.
+
+    Data source priority:
+      1. phase2_453_families.json (if 'earliest_priority_year' present)
+      2. FILING_YEAR_BY_WBS from isru_data.py (pre-aggregated fallback)
+    """
+    json_path = os.path.join(os.path.dirname(__file__), '..', 'data',
+                             'phase2_453_families.json')
+    use_json = False
+
+    if os.path.exists(json_path):
+        import json
+        with open(json_path) as jf:
+            families = json.load(jf)
+        if families and 'earliest_priority_year' in families[0]:
+            use_json = True
+            print("  [fig3] reading from phase2_453_families.json")
+
+    wbs_labels = ['WBS-1 Materials', 'WBS-2 Manufacturing',
+                  'WBS-3 Robotics', 'WBS-4 Structures & Systems']
+    wbs_colors = ['#5B9BD5', '#ED7D31', '#70AD47', '#C0504D']
+    wbs_prefixes = ['1-', '2-', '3-', '4-']
+
+    if use_json:
+        from collections import defaultdict
+        year_wbs = defaultdict(lambda: [0, 0, 0, 0])
+        for fam in families:
+            yr = fam['earliest_priority_year']
+            codes = fam.get('itc_codes', [])
+            for code in codes:
+                for wi, prefix in enumerate(wbs_prefixes):
+                    if code.startswith(prefix):
+                        year_wbs[yr][wi] += 1
+                        break
+        years = sorted(year_wbs.keys())
+        wbs_data = {y: year_wbs[y] for y in years}
+    else:
+        print("  [fig3] using FILING_YEAR_BY_WBS from isru_data.py")
+        years = sorted(FILING_YEAR_BY_WBS.keys())
+        wbs_data = FILING_YEAR_BY_WBS
+
+    fig, ax1 = plt.subplots(figsize=(12, 6))
+
+    bottom = np.zeros(len(years))
+    for i, (label, color) in enumerate(zip(wbs_labels, wbs_colors)):
+        vals = np.array([wbs_data[y][i] for y in years])
+        ax1.bar(years, vals, bottom=bottom, color=color, label=label,
+                edgecolor='white', linewidth=0.3, width=0.8)
+        bottom += vals
+
+    ax1.set_xlabel("Earliest Priority Year")
+    ax1.set_ylabel("Number of Families")
+    ax1.set_title("Filing-Year Distribution by WBS Layer (N = 453 families)")
+    ax1.legend(loc='upper left', fontsize=9)
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # Cumulative line on secondary axis
+    ax2 = ax1.twinx()
+    totals_per_year = [sum(wbs_data[y]) for y in years]
+    cumulative = np.cumsum(totals_per_year)
+    ax2.plot(years, cumulative, color='black', linewidth=1.5, linestyle='--',
+             marker='o', markersize=3, label='Cumulative')
+    ax2.set_ylabel("Cumulative Families")
+    ax2.spines['top'].set_visible(False)
+    ax2.legend(loc='center right', fontsize=9)
+
+    fig.savefig(os.path.join(FIGDIR, 'fig3_filing_year.png'))
+    plt.close(fig)
+    print("  fig3_filing_year.png")
 
 
 def figS1_wbs_stacked():
