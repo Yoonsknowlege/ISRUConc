@@ -69,7 +69,12 @@ def fig2_portfolio_bar():
 
 
 def fig3_filing_year():
-    """Figure 3: Filing-year distribution by WBS layer (N=453 families)."""
+    """Figure 3: Filing-year distribution by WBS layer (N=453 families).
+
+    Primary source: earliest_priority_year from phase2_453_families.json.
+    Fallback: FILING_YEAR_BY_WBS hardcoded data (for datasets without
+    per-record priority-year fields).
+    """
     json_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'phase2_453_families.json')
     with open(json_path, 'r', encoding='utf-8') as f:
         families = json.load(f)
@@ -78,12 +83,17 @@ def fig3_filing_year():
     wbs_labels_ordered = ['WBS-1 Materials', 'WBS-2 Manufacturing',
                           'WBS-3 Robotics', 'WBS-4 Structures & Systems']
 
+    json_has_years = False
     for fam in families:
-        year = fam.get('earliest_priority_year') or fam.get('publication_year')
-        if not year or int(year) < 1990:
+        year = fam.get('earliest_priority_year')
+        if year is not None:
+            json_has_years = True
+        else:
+            continue
+        if int(year) < 1990:
             continue
         year = int(year)
-        itc_tags = fam.get('itc_domains', [])
+        itc_tags = fam.get('itc_domains', fam.get('itc_codes', []))
         wbs_seen = set()
         for tag in itc_tags:
             layer = tag.split('-')[0]
@@ -96,8 +106,8 @@ def fig3_filing_year():
                 wbs_year.setdefault(wbs_label, {})
                 wbs_year[wbs_label][year] = wbs_year[wbs_label].get(year, 0) + 1
 
-    if not wbs_year:
-        print("  fig3_filing_year.png — SKIPPED (no year data in JSON)")
+    if not json_has_years or not wbs_year:
+        print("  fig3_filing_year.png — SKIPPED (no priority-year data in JSON)")
         return
 
     all_years = sorted({y for d in wbs_year.values() for y in d})

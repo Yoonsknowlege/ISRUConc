@@ -4,6 +4,14 @@
 
 **Dataset:** 453 unique simple patent families (phase-two synchronized dataset)
 
+## Design
+
+This package has two components:
+
+1. **Exact replication package** — the `data/` directory contains all constants, matrices, per-record screening decisions, and family merge maps needed to reproduce the code-generated figures and verify the analytical values reported in the manuscript, using the same 453-family dataset.
+
+2. **Reusable analysis pipeline** — `scripts/ISRU_Reproducibility_Pipeline.py` implements a parameterized pipeline that subsequent researchers can apply to their own datasets by supplying their own keyword lists, CPC/IPC code prefixes, domain taxonomy, and patent export CSV.
+
 ## Directory Structure
 
 ```
@@ -14,8 +22,10 @@ ISRUConc/
 ├── data/
 │   ├── isru_data.py                       ← Core data module (constants, matrices, ITC_RULES, LENS_QUERY)
 │   ├── crosswalk_codebook.csv             ← ITC-to-WBS crosswalk with CPC/keyword/source mapping
-│   ├── phase2_453_families.json           ← 453-family tagged dataset (Lens IDs, CPC, ITC tags)
-│   └── adjudication_log.csv               ← Screening & consolidation audit trail (R1–R6)
+│   ├── phase2_453_families.json           ← 453-family tagged dataset (Lens IDs, CPC, ITC tags, priority year)
+│   ├── screening_decisions.csv            ← Per-record screening pipeline (1,093 records, R1–R6)
+│   ├── family_merge_map.csv               ← Family consolidation map (521 entries → 453 families)
+│   └── raw_1093_ids.csv                   ← Initial retrieval hashed IDs with retrieval date
 ├── scripts/
 │   ├── generate_all_figures.py            ← Figure generation (Figs. 2, 3, 4, 5, S1)
 │   └── ISRU_Reproducibility_Pipeline.py   ← Full parameterized analysis pipeline
@@ -83,7 +93,7 @@ Each record was scored through an LLM-assisted expert screening protocol:
 
 ### A.3. ITC Domain Tagging
 
-Deterministic, OR-based CPC Hybrid v2 protocol assigning each family to one or more of 15 ITC domains across four WBS layers. The complete `ITC_RULES` dictionary and `crosswalk_codebook.csv` are provided in the `data/` directory.
+Deterministic, OR-based CPC Hybrid protocol assigning each family to one or more of 15 ITC domains across four WBS layers. The complete `ITC_RULES` dictionary and `crosswalk_codebook.csv` are provided in the `data/` directory.
 
 ### A.4. ITC-Rescue Rule
 
@@ -127,6 +137,7 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 | `CPC_TOP25` | Top 25 CPC codes by frequency |
 | `CPC_COOCCURRENCE` | 25x25 co-occurrence matrix |
 | `CPC_CENTRALITY` | Weighted degree + BFS betweenness for top CPC codes (Table 5) |
+| `CPC_BRIDGING` | Legacy alias for `CPC_CENTRALITY` |
 | `TOP_JACCARD_PAIRS` | Ranked inter-domain Jaccard pairs |
 
 ## Data Source
@@ -146,7 +157,20 @@ The **ITC codebook** (`ITC_RULES` in `isru_data.py`) maps 15 technology domains 
 
 ## Scope and Limitations
 
-This package provides the verbatim Lens.org Boolean query string, the ITC-to-WBS crosswalk codebook, aggregated matrices, the adjudication audit trail, and plotting scripts sufficient to reproduce the code-generated figures and verify the analytical constants reported in the manuscript. The per-record LLM adjudication scores are documented in the manuscript Appendix but are not included as machine-readable files in this release.
+**What this enables:**
+- Reproduce all code-generated figures (Figs. 2–5, S1) from the provided data
+- Verify every analytical constant reported in the manuscript (portfolio counts, Jaccard values, centrality scores)
+- Trace each of the 1,093 initial records through the full screening pipeline (R1–R6) via `screening_decisions.csv`
+- Inspect the family consolidation logic via `family_merge_map.csv`
+- Apply the same parameterized pipeline to new patent datasets
+
+**What this does not yet provide:**
+- Raw full-text patent records (subject to Lens.org terms of use; hashed IDs are provided instead)
+- Per-record LLM adjudication prompts/responses (documented in the manuscript Appendix)
+
+**Notes:**
+- Jaccard similarity values in the manuscript and `JACCARD_MATRIX` are computed on a patent-family basis (J(A,B) = |families_A ∩ families_B| / |families_A ∪ families_B|), not on CPC code sets
+- CPC centrality values in `CPC_CENTRALITY` report both weighted degree and BFS betweenness centrality, with betweenness normalized by (N−1)(N−2)/2 following Freeman (1977)
 
 ## Citation
 

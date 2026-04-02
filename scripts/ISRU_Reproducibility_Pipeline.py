@@ -3,7 +3,7 @@
 """
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  ISRU Construction Patent Analysis — Reproducibility Pipeline              ║
-║  Version: 1.0                                                              ║
+║                                                                              ║
 ║  License: CC BY 4.0                                                        ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -12,15 +12,21 @@ PURPOSE
 This script implements a **reusable, parameterized** patent landscape analysis
 pipeline for ISRU (In-Situ Resource Utilization) Construction technologies.
 
-REPRODUCIBILITY CONCEPT
------------------------
-Reproducibility in this study does NOT mean replicating the exact same numerical
-results from the exact same dataset. Instead, it means that subsequent researchers
-can:
-  1. Define their OWN keyword lists, CPC/IPC code prefixes, and domain taxonomy
-  2. Supply their OWN patent dataset (e.g., from Lens.org, Espacenet, or USPTO)
-  3. Follow the SAME analytical procedure (tagging → portfolio → network →
-     Jaccard → leadership) to produce comparable results
+DESIGN CONCEPT
+--------------
+This package has two components:
+
+  (A) Exact replication package — the data/ directory contains all constants,
+      matrices, and per-record screening decisions needed to reproduce the
+      code-generated figures and verify the analytical values reported in the
+      manuscript, using the same 453-family dataset.
+
+  (B) Reusable analysis pipeline — this script implements a parameterized
+      pipeline that subsequent researchers can apply to their OWN datasets:
+        1. Define their OWN keyword lists, CPC/IPC code prefixes, and domain taxonomy
+        2. Supply their OWN patent dataset (e.g., from Lens.org, Espacenet, or USPTO)
+        3. Follow the SAME analytical procedure (tagging → portfolio → network →
+           Jaccard → leadership) to produce comparable results
 
 HOW TO USE (FOR SUBSEQUENT RESEARCHERS)
 ---------------------------------------

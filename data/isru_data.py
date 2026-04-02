@@ -386,3 +386,6 @@ CPC_CENTRALITY = [
     {"cpc": "E02D", "degree": 0.163, "betweenness": 0.063},
     {"cpc": "G01N", "degree": 0.151, "betweenness": 0.031},
 ]
+
+# Legacy alias (backward compatibility)
+CPC_BRIDGING = CPC_CENTRALITY
