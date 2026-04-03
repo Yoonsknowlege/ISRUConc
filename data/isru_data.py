@@ -13,53 +13,6 @@ reproduce the figures and tables in the manuscript.
 import numpy as np
 
 # ============================================================
-# Lens.org Retrieval Query (verbatim Boolean string)
-# ============================================================
-# Executed on Lens.org Patent Search on 2026-03-28.
-# Returns 1,093 patent records before relevance screening.
-# Eight keyword blocks (K1-K8) OR-unioned with five CPC-anchor blocks (C1-C5).
-
-LENS_QUERY = (
-    # --- K1: Direct ISRU construction terminology ---
-    '(("in-situ resource utilization" OR "in situ resource utilization" OR "ISRU") '
-    'AND (habitat OR shelter OR regolith OR sintering OR geopolymer '
-    'OR "landing pad" OR "3D printing" OR "additive manufacturing" OR construction)) '
-    # --- K2: Regolith processing / beneficiation ---
-    'OR ("regolith" AND (processing OR beneficiation OR "particle size" '
-    'OR "mineral separation" OR excavat* OR refin* OR "oxygen extraction")) '
-    # --- K3: Materials — binder, ceramic, composite ---
-    'OR ((geopolymer OR binder OR cement OR "sulfur concrete" OR ceramic '
-    'OR "sintered body" OR vitrif* OR "composite material" OR "fiber reinforc*") '
-    'AND (lunar OR martian OR space OR extraterrestrial OR regolith)) '
-    # --- K4: Additive manufacturing ---
-    'OR (("3D print*" OR "additive manufactur*" OR "contour crafting" '
-    'OR "layer-by-layer" OR "fused deposition" OR "selective laser sinter*" '
-    'OR "powder bed" OR "electron beam melt*" OR "solar sinter*") '
-    'AND (lunar OR martian OR space OR regolith OR "in-situ")) '
-    # --- K5: Robotics ---
-    'OR (("autonomous robot*" OR "mobile robot*" OR "lunar rover" OR "robotic vehicle" '
-    'OR "tele-operat*" OR teleoperat* OR "remote operat*" OR "autonomous construct*" '
-    'OR "swarm construct*" OR "multi-robot" OR "robotic construct*") '
-    'AND (lunar OR martian OR space OR construction)) '
-    # --- K6: Structures ---
-    'OR ((habitat OR shelter OR "pressurized module" OR shielding '
-    'OR "radiation protect*" OR "landing pad" OR "launch pad" '
-    'OR inflatable OR deployable OR expandable) '
-    'AND (lunar OR martian OR space OR extraterrestrial)) '
-    # --- K7: ECLSS ---
-    'OR (("life support" OR ECLSS OR "environmental control" OR "air revitalization" '
-    'OR "water recycl*") AND (lunar OR space OR habitat)) '
-    # --- K8: Additional space construction ---
-    'OR (("space construction" OR "extraterrestrial construction" '
-    'OR "planetary construction" OR "lunar base" OR "Mars base") '
-    'AND (build* OR construct* OR manufactur* OR fabricat*)) '
-    # --- C1-C5: CPC-anchor blocks (classification-only capture) ---
-    'OR classification:(B33Y OR C04B28 OR C04B12 OR C04B35 '
-    'OR E04H15 OR B22F10 OR B22F12 OR E01C OR B64G1/48 '
-    'OR G21F1 OR E04G21)'
-)
-
-# ============================================================
 # ITC Domain Definitions
 # ============================================================
 ITC_DOMAINS = ['1-1', '1-2', '1-3', '2-1', '2-2', '2-3', '2-4', '3-1', '3-2', '3-3', '4-1', '4-2', '4-3', '4-4', '4-5']
@@ -233,50 +186,9 @@ PORTFOLIO = {
     "4-5": 23
 }
 
-# Filing-Year Distribution by WBS Layer (Figure 3)
-# ============================================================
-# Each key is the earliest-priority year; values are family counts per WBS layer.
-# A family may appear in multiple WBS layers if it has tags in more than one.
-# Years before 2000 are grouped; years after 2024 are filings with 2025 priority.
-FILING_YEAR_BY_WBS = {
-    # year: [WBS-1, WBS-2, WBS-3, WBS-4]
-    2000: [1, 0, 0, 2],
-    2001: [0, 1, 0, 1],
-    2002: [1, 0, 0, 2],
-    2003: [0, 1, 1, 3],
-    2004: [1, 1, 0, 2],
-    2005: [2, 1, 0, 3],
-    2006: [1, 2, 0, 4],
-    2007: [2, 1, 1, 3],
-    2008: [1, 2, 0, 5],
-    2009: [2, 1, 0, 4],
-    2010: [3, 2, 1, 5],
-    2011: [2, 3, 0, 6],
-    2012: [3, 2, 1, 5],
-    2013: [4, 3, 1, 7],
-    2014: [5, 4, 1, 8],
-    2015: [6, 5, 1, 9],
-    2016: [7, 6, 2, 11],
-    2017: [8, 7, 1, 12],
-    2018: [10, 10, 2, 16],
-    2019: [14, 13, 3, 19],
-    2020: [16, 15, 4, 22],
-    2021: [18, 17, 3, 24],
-    2022: [20, 19, 4, 27],
-    2023: [22, 21, 5, 30],
-    2024: [15, 14, 3, 20],
-    2025: [5, 4, 1, 7],
-}
-
 # ============================================================
 # Phase-Two Jaccard Similarity Matrix (15 x 15)
 # ============================================================
-# Definition: J(A,B) = |F_A ∩ F_B| / |F_A ∪ F_B|
-#   where F_A is the set of patent families tagged to domain A.
-# This is a patent-family-based Jaccard index (manuscript §3.3, Figure 5).
-# Note: The reusable Pipeline (ISRU_Reproducibility_Pipeline.py) offers
-#   both patent-family-based and CPC-code-set-based Jaccard options;
-#   the values below correspond to the patent-family-based definition.
 JACCARD_MATRIX = np.array([
     [1.000,0.076,0.056,0.069,0.030,0.060,0.167,0.065,0.000,0.059,0.108,0.012,0.066,0.033,0.037],
     [0.076,1.000,0.148,0.148,0.011,0.012,0.045,0.014,0.000,0.032,0.137,0.067,0.028,0.063,0.013],
@@ -409,26 +321,79 @@ CPC_COOCCURRENCE = np.array([
 ])
 
 # ============================================================
-# CPC Network Centrality (Table 5, top 10 by weighted degree)
+# CPC Bridging Centrality (degree centrality, top 10)
 # ============================================================
-# Degree: weighted degree centrality = sum(edge weights) / (N-1),
-#   where N = 25 (top CPC codes) and edge weight = co-occurrence count.
-# Betweenness: BFS-based shortest-path betweenness centrality,
-#   normalized by (N-1)(N-2)/2.
-# These values match manuscript Table 5 (N = 453 families).
-
-CPC_CENTRALITY = [
-    {"cpc": "B64G", "degree": 0.422, "betweenness": 0.107},
-    {"cpc": "E04H", "degree": 0.301, "betweenness": 0.088},
-    {"cpc": "E21C", "degree": 0.289, "betweenness": 0.056},
-    {"cpc": "C04B", "degree": 0.265, "betweenness": 0.088},
-    {"cpc": "B33Y", "degree": 0.253, "betweenness": 0.129},
-    {"cpc": "E04B", "degree": 0.217, "betweenness": 0.075},
-    {"cpc": "B22F", "degree": 0.199, "betweenness": 0.050},
-    {"cpc": "B29C", "degree": 0.169, "betweenness": 0.052},
-    {"cpc": "E02D", "degree": 0.163, "betweenness": 0.063},
-    {"cpc": "G01N", "degree": 0.151, "betweenness": 0.031},
+# ============================================================
+# Filing-Year × WBS-Layer Tag Counts (for Figure 3)
+# ============================================================
+# Each row: [year, WBS-1_tags, WBS-2_tags, WBS-3_tags, WBS-4_tags]
+# A single family may contribute tags to multiple WBS layers;
+# therefore column sums exceed TOTAL_FAMILIES.
+FILING_YEAR_WBS = [
+    [2000,  0,  0,  0,  2],
+    [2002,  1,  0,  1,  1],
+    [2006,  0,  0,  0,  4],
+    [2007,  1,  0,  1,  1],
+    [2008,  1,  0,  1,  7],
+    [2009,  0,  0,  0,  2],
+    [2010,  0,  0,  0,  3],
+    [2011,  2,  0,  0,  1],
+    [2012,  1,  0,  0,  2],
+    [2013,  0,  1,  0,  0],
+    [2014,  0,  0,  1,  7],
+    [2015,  0,  0,  0,  1],
+    [2016,  3,  1,  0,  4],
+    [2017,  8,  4,  1,  1],
+    [2018,  4,  8,  0,  7],
+    [2019,  9, 10,  4,  9],
+    [2020, 14, 13,  3, 22],
+    [2021, 22, 30,  5, 32],
+    [2022, 21, 37,  3, 37],
+    [2023, 30, 38,  6, 29],
+    [2024, 48, 44,  3, 50],
+    [2025, 48, 62,  6, 51],
+    [2026, 10,  5,  2,  9],
 ]
 
-# Legacy alias for backward compatibility
-CPC_BRIDGING = [[d["cpc"], d["degree"]] for d in CPC_CENTRALITY]
+CPC_BRIDGING = [
+    [
+        "B64G",
+        0.792
+    ],
+    [
+        "C04B",
+        0.667
+    ],
+    [
+        "Y02P",
+        0.667
+    ],
+    [
+        "B33Y",
+        0.625
+    ],
+    [
+        "E02D",
+        0.583
+    ],
+    [
+        "G01N",
+        0.5
+    ],
+    [
+        "E04B",
+        0.5
+    ],
+    [
+        "E04G",
+        0.5
+    ],
+    [
+        "Y02E",
+        0.5
+    ],
+    [
+        "E04H",
+        0.458
+    ]
+]

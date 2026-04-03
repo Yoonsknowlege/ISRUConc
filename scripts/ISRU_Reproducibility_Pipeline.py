@@ -12,17 +12,15 @@ PURPOSE
 This script implements a **reusable, parameterized** patent landscape analysis
 pipeline for ISRU (In-Situ Resource Utilization) Construction technologies.
 
-DESIGN CONCEPT
---------------
-This script is the REUSABLE PIPELINE component of the repository. It is designed
-for portability: subsequent researchers can define their own keyword lists, CPC/IPC
-code prefixes, and domain taxonomy, supply their own patent dataset, and follow the
-same analytical procedure (tagging → portfolio → network → Jaccard → leadership)
-to produce comparable results for related technology domains.
-
-For EXACT REPLICATION of the manuscript's figures and tables, use the companion
-script `generate_all_figures.py`, which reads directly from the pre-computed data
-in `isru_data.py` and the tagged dataset in `phase2_453_families.json`.
+REPRODUCIBILITY CONCEPT
+-----------------------
+Reproducibility in this study does NOT mean replicating the exact same numerical
+results from the exact same dataset. Instead, it means that subsequent researchers
+can:
+  1. Define their OWN keyword lists, CPC/IPC code prefixes, and domain taxonomy
+  2. Supply their OWN patent dataset (e.g., from Lens.org, Espacenet, or USPTO)
+  3. Follow the SAME analytical procedure (tagging → portfolio → network →
+     Jaccard → leadership) to produce comparable results
 
 HOW TO USE (FOR SUBSEQUENT RESEARCHERS)
 ---------------------------------------
@@ -66,10 +64,10 @@ DEPENDENCIES
 
 REFERENCE
 ---------
-  [Your citation here, e.g.:]
-  Lee, Y. (2026). WBS-based patent landscape of ISRU construction:
-  technology convergence and private-sector entry opportunities.
-  Acta Astronautica (under review).
+  Lee, Y. S. (2026). Exploring Work Breakdown Structures of in-situ
+  resource utilization construction: technology convergence, cross-domain
+  coupling, and private-sector entry opportunities based on the patent
+  landscape. Acta Astronautica (under review).
 """
 
 import pandas as pd
@@ -89,7 +87,7 @@ warnings.filterwarnings('ignore')
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 # --- A1. File Paths ---
-DATA_FILE   = './isru-construction-final-union-kuc.csv'   # Input CSV from Lens.org
+DATA_FILE   = None   # ← Set to your Lens.org CSV path (user-supplied; not included in this repository)
 OUTPUT_DIR  = './outputs/'                                 # Output directory
 OUTPUT_XLSX = OUTPUT_DIR + 'Patent_Analysis_Results.xlsx'
 
@@ -501,13 +499,7 @@ def compute_cpc_network(df, col_map, delimiter):
     degree = {c: sum(adj[c].values()) / max_edges if max_edges > 0 else 0
               for c in cpc_list}
 
-    # Betweenness centrality (BFS shortest-path approximation)
-    # Implementation note: This uses an unweighted BFS to find shortest
-    # paths between all pairs, counting how often each node appears as an
-    # intermediary. The result is normalized by (N-1)(N-2)/2 where N is the
-    # number of nodes. This is a simplified version of the Brandes (2001)
-    # algorithm suitable for small networks (N ≤ 50). For larger networks,
-    # consider using networkx.betweenness_centrality() instead.
+    # Betweenness centrality (BFS approximation)
     between = {c: 0 for c in cpc_list}
     for start in cpc_list:
         visited = {start}
@@ -521,11 +513,6 @@ def compute_cpc_network(df, col_map, delimiter):
                     queue.append((nbr, new_path))
                     for mid in new_path[1:-1]:
                         between[mid] += 1
-    # Normalize by the number of node pairs
-    n_nodes = len(cpc_list)
-    norm = (n_nodes - 1) * (n_nodes - 2) / 2
-    if norm > 0:
-        between = {c: v / norm for c, v in between.items()}
 
     # Greedy modularity community detection
     print("  Running greedy modularity community detection...")
@@ -570,67 +557,33 @@ def compute_cpc_network(df, col_map, delimiter):
     return cpc_list, adj, degree, between, comm_data, best_Q
 
 
-def compute_jaccard(df, itc_rules, col_map, delimiter, method='family'):
-    """Stage 4: Jaccard similarity between ITC domains.
+def compute_jaccard(df, itc_rules, col_map, delimiter):
+    """Stage 4: Jaccard similarity between ITC domains."""
+    print(f"\n[4/5] Jaccard Similarity Analysis...")
 
-    Parameters
-    ----------
-    method : str, default 'family'
-        'family' — J(A,B) = |F_A ∩ F_B| / |F_A ∪ F_B|, where F is the
-            set of patent-family indices tagged to each domain.
-            This is the definition used in the manuscript (§3.3, Figure 5).
-        'cpc' — J(A,B) = |C_A ∩ C_B| / |C_A ∪ C_B|, where C is the
-            pooled set of CPC codes appearing on patents in each domain.
-            This alternative measures shared classification breadth and
-            may be useful for exploratory analysis on new datasets.
-    """
-    print(f"\n[4/5] Jaccard Similarity Analysis (method='{method}')...")
+    cpc_col = col_map['cpc']
+    domain_cpcs = {}
+
+    for domain_id in itc_rules:
+        mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
+        dp = df[mask]
+        cpcs = set()
+        for _, row in dp.iterrows():
+            codes = [c.strip() for c in str(row[cpc_col]).split(delimiter) if c.strip()]
+            cpcs.update(codes)
+        domain_cpcs[domain_id] = cpcs
 
     domains = sorted(itc_rules.keys())
     n = len(domains)
-
     mat = np.zeros((n, n))
-
-    if method == 'family':
-        # Patent-family-based Jaccard (manuscript definition)
-        domain_families = {}
-        for domain_id in itc_rules:
-            mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
-            domain_families[domain_id] = set(df[mask].index)
-
-        for i in range(n):
-            for j in range(n):
-                if i == j:
-                    mat[i, j] = 1.0
-                else:
-                    inter = len(domain_families[domains[i]] & domain_families[domains[j]])
-                    union = len(domain_families[domains[i]] | domain_families[domains[j]])
-                    mat[i, j] = inter / union if union > 0 else 0
-
-    elif method == 'cpc':
-        # CPC-code-set-based Jaccard (alternative definition)
-        cpc_col = col_map['cpc']
-        domain_cpcs = {}
-        for domain_id in itc_rules:
-            mask = df['ITC_Domains'].apply(lambda x: domain_id in x)
-            dp = df[mask]
-            cpcs = set()
-            for _, row in dp.iterrows():
-                codes = [c.strip() for c in str(row[cpc_col]).split(delimiter) if c.strip()]
-                cpcs.update(codes)
-            domain_cpcs[domain_id] = cpcs
-
-        for i in range(n):
-            for j in range(n):
-                if i == j:
-                    mat[i, j] = 1.0
-                else:
-                    inter = len(domain_cpcs[domains[i]] & domain_cpcs[domains[j]])
-                    union = len(domain_cpcs[domains[i]] | domain_cpcs[domains[j]])
-                    mat[i, j] = inter / union if union > 0 else 0
-
-    else:
-        raise ValueError(f"Unknown Jaccard method: '{method}'. Use 'family' or 'cpc'.")
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                mat[i, j] = 1.0
+            else:
+                inter = len(domain_cpcs[domains[i]] & domain_cpcs[domains[j]])
+                union = len(domain_cpcs[domains[i]] | domain_cpcs[domains[j]])
+                mat[i, j] = inter / union if union > 0 else 0
 
     # Sorted pairs
     pairs = []
@@ -875,6 +828,14 @@ def print_summary(df, df_port, cpc_list, comm_data, best_Q,
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
 if __name__ == '__main__':
+
+    # Pre-flight check: user must supply their own CSV
+    if DATA_FILE is None or not os.path.isfile(DATA_FILE):
+        print("ERROR: DATA_FILE is not set or does not exist.")
+        print("       This pipeline requires a user-supplied Lens.org CSV export.")
+        print("       Edit the DATA_FILE variable at the top of this script,")
+        print("       then re-run.  See README.md → 'Quick Start' for details.")
+        sys.exit(1)
 
     # Ensure output directory exists
     os.makedirs(OUTPUT_DIR, exist_ok=True)
