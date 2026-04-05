@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset or code, please cite it as below."
+title: "ISRU Construction Patent Analysis — Reproduction Package"
+authors:
+  - family-names: Lee
+    given-names: Tai Sik
+    orcid: ""
+  - family-names: Lee
+    given-names: Yoon-Sun
+    orcid: ""
+type: dataset
+date-released: "2026-04-03"
+version: "1.0"
+license: CC-BY-4.0
+repository-code: "https://github.com/Yoonsknowlege/ISRUConc"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Lee
+      given-names: Tai Sik
+    - family-names: Lee
+      given-names: Yoon-Sun
+  title: "WBS-based patent landscape of ISRU construction: technology convergence and subsystem-level industrial participation pathways"
+  journal: "Acta Astronautica"
+  year: 2026
+  status: "under review"
