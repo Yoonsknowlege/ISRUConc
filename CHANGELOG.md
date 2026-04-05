@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.6-sensitivity-expansion
+
+This revision expands the sensitivity analysis suite and aligns the repository with the final pre-submission manuscript (v6).
+
+### Main changes
+- **`sensitivity_checks.py`**: Added two new checks — (3) jurisdiction-stratified CN vs non-CN sensitivity reproducing Supplementary Table S2, and (4) shared-anchor inflation check for the 4-1 ↔ 4-4 Jaccard pair via E04H15 exclusion.
+- **`README.md`**: Updated sensitivity_checks.py description in directory structure; added CN vs non-CN and shared-anchor rows to the Verifiable Scope table; expanded Quick Start sensitivity section to list all four checks.
+- **Manuscript alignment**: The updated script reproduces the CN vs non-CN results now cited in the manuscript body (Supplementary Table S2 reference) and the E04H15 shared-anchor inflation result that replaces the former "future check" recommendation.
+
 ## v1.5-title-sync
 
 This revision synchronizes the repository metadata with the final manuscript title and authorship.

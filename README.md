@@ -22,7 +22,7 @@ reproduction_package/
 ├── scripts/
 │   ├── generate_all_figures.py         ← Figure generation (Figs. 2–5, S1)
 │   ├── recompute_tables.py             ← Recompute Tables 4–7 from JSON dataset
-│   ├── sensitivity_checks.py           ← Leave-out and classified-only sensitivity analyses
+│   ├── sensitivity_checks.py           ← Leave-out, classified-only, CN vs non-CN, and shared-anchor inflation checks
 │   └── ISRU_Reproducibility_Pipeline.py ← Reusable parameterized analysis pipeline template
 └── figures/                            ← Output directory for generated PNGs
 ```
@@ -76,6 +76,8 @@ With the data and scripts provided in this package, an independent researcher ca
 | **Jaccard similarity pairs** (Fig. 5, Table 5) | Recompute from the `itc_codes` field in the JSON |
 | **Descriptive profiles — Post-2020 share** (Table 6) | Filter intersection-set families by `earliest_priority_year >= 2020` |
 | **Jurisdiction distribution** | Filter by `jurisdiction` field in JSON |
+| **CN vs non-CN sensitivity** (Supplementary Table S2) | Run `sensitivity_checks.py` or filter by `jurisdiction` field |
+| **Shared-anchor inflation** (4-1 ↔ 4-4, E04H15) | Run `sensitivity_checks.py` |
 | **Priority-year timeline** (alternative to pub-year) | Use `earliest_priority_year` field in JSON |
 
 **Not independently verifiable from this package alone:** Table 7 descriptive profiles beyond jurisdiction and Post-2020 share (dominant CPC prefixes and core keywords require CPC subclass look-up and qualitative judgment not included in this release).
@@ -118,6 +120,12 @@ python recompute_tables.py
 cd scripts
 python sensitivity_checks.py
 ```
+
+This runs four checks:
+1. Leave-out sensitivity excluding rescue families
+2. CPC bridging sensitivity (classified-only vs all)
+3. Jurisdiction-stratified sensitivity (CN vs non-CN subsets, corresponding to Supplementary Table S2)
+4. Shared-anchor inflation check (4-1 ↔ 4-4 Jaccard excluding E04H15-only families)
 
 ### Run Full Analysis Pipeline on Your Own Data
 
